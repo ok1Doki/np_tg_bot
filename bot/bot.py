@@ -176,10 +176,9 @@ async def message_handle(update: Update, context: CallbackContext, message=None,
     user_id = update.message.from_user.id
     chat_mode = db.get_user_attribute(user_id, "current_chat_mode")
 
-    await generate_voice_handle(update, context, message=message)
-
     async def message_handle_fn():
         # new dialog timeout
+        global answer
         if use_new_dialog_timeout:
             if (datetime.now() - db.get_user_attribute(user_id, "last_interaction")).seconds > config.new_dialog_timeout and len(db.get_dialog_messages(user_id)) > 0:
                 db.start_new_dialog(user_id)
@@ -243,6 +242,8 @@ async def message_handle(update: Update, context: CallbackContext, message=None,
                 await asyncio.sleep(0.01)  # wait a bit to avoid flooding
 
                 prev_answer = answer
+
+            await generate_voice(update, context, message=answer)
 
             # update user data
             new_dialog_message = {"user": _message, "bot": answer, "date": datetime.now()}
@@ -370,23 +371,15 @@ async def generate_image_handle(update: Update, context: CallbackContext, messag
         await update.message.reply_photo(image_url, parse_mode=ParseMode.HTML)
 
 
-async def generate_voice_handle(update: Update, context: CallbackContext, message=None):
-    await register_user_if_not_exists(update, context, update.message.from_user)
-    if await is_previous_message_not_answered_yet(update, context): return
-
+async def generate_voice(update: Update, context: CallbackContext, message=None):
     user_id = update.message.from_user.id
     db.set_user_attribute(user_id, "last_interaction", datetime.now())
 
-    speech_filename = text_to_speech(text='Дякую за надання номеру трекінгу. Зараз я перевірю статус вашого відправлення.')
-    await update.message.chat.send_voice(voice=open(speech_filename, 'rb'))
-
-
-def text_to_speech(text: str):
-    text_input = tts.SynthesisInput(text=text)
-    voice_params = tts.VoiceSelectionParams(
-        language_code='uk-UA', name='Wavenet-A'
-    )
-    audio_config = tts.AudioConfig(audio_encoding=tts.AudioEncoding.LINEAR16)
+    voice_name = 'uk-UA-Wavenet-A'
+    language_code = "-".join(voice_name.split("-")[:2])
+    text_input = tts.SynthesisInput(text=message)
+    voice_params = tts.VoiceSelectionParams(language_code=language_code, name=voice_name)
+    audio_config = tts.AudioConfig(audio_encoding=tts.AudioEncoding.MP3, speaking_rate=1.3)
 
     client = tts.TextToSpeechClient()
     response = client.synthesize_speech(
@@ -394,12 +387,7 @@ def text_to_speech(text: str):
         voice=voice_params,
         audio_config=audio_config,
     )
-
-    filename = f"{datetime.time()}.wav"
-    with open(filename, "wb") as out:
-        out.write(response.audio_content)
-        print(f'Generated speech saved to "{filename}"')
-    return filename
+    await update.message.chat.send_voice(voice=response.audio_content)
 
 
 async def cancel_handle(update: Update, context: CallbackContext):
@@ -502,6 +490,7 @@ async def error_handle(update: Update, context: CallbackContext) -> None:
     except:
         await context.bot.send_message(update.effective_chat.id, "Some error in error handler")
 
+
 async def post_init(application: Application):
     await application.bot.set_my_commands([
         BotCommand("/start", "Розпочати новий діалог"),
@@ -546,7 +535,7 @@ def run_bot() -> None:
 
     application.add_handler(MessageHandler(filters.VOICE & user_filter, voice_message_handle))
 
-    # application.add_error_handler(error_handle)
+    application.add_error_handler(error_handle)
 
     # start the bot
     application.run_polling()
