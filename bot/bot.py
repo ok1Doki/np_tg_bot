@@ -201,6 +201,7 @@ async def message_handle(update: Update, context: CallbackContext, message=None,
                  return
 
             dialog_messages = db.get_dialog_messages(user_id, dialog_id=None)
+            logging.error(dialog_messages)
             parse_mode = {
                 "html": ParseMode.HTML,
                 "markdown": ParseMode.MARKDOWN

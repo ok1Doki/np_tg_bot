@@ -9,7 +9,6 @@ services:
       - 127.0.0.1:${MONGODB_PORT:-27017}:${MONGODB_PORT:-27017}
     volumes:
       - ${MONGODB_PATH:-./mongodb}:/data/db
-    # TODO: add auth
 
   chatgpt_telegram_bot:
     container_name: chatgpt_telegram_bot
@@ -24,6 +23,7 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - mongo
+      - assistant_core
 
   mongo_express:
     container_name: mongo-express
@@ -40,3 +40,27 @@ services:
       - ME_CONFIG_BASICAUTH_PASSWORD=${MONGO_EXPRESS_PASSWORD:-password}
     depends_on:
       - mongo
+
+  assistant_core:
+    container_name: assistant_core
+    command: sh -c "uvicorn core.main:app --host 0.0.0.0"
+    ports:
+      - "8008:8000"
+    build:
+      context: core
+      dockerfile: Dockerfile
+    volumes:
+      - "C:\\Users\\nazar.panasiuk\\Downloads\\np-tg-tts-7a6f0b044818.json:/secrets/key.json"
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/secrets/key.json
+
+  web_app:
+    container_name: web_app
+    build:
+      context: ./webapp
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    volumes:
+      - ./webapp:/usr/src/app
+      - /usr/src/app/node_modules
