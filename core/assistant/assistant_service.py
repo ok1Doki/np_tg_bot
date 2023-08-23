@@ -1,4 +1,3 @@
-import logging
 from datetime import datetime
 
 from core.audio_handling.audio_generation_service import convert_text_to_audio
@@ -18,8 +17,7 @@ async def handle_audio_from_user(session_id: str,
         messages_history[session_id] = []
 
     transcoded_user_audio_file_path = get_transcoded_audio_file_path(file)
-    transcript_content_text = await convert_audio_to_text(transcoded_user_audio_file_path)
-    user_message = transcript_content_text['text']
+    user_message = await convert_audio_to_text(transcoded_user_audio_file_path)
     if user_text_callback is not None:
         await user_text_callback(user_message)
 

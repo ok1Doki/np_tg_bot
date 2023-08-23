@@ -29,9 +29,10 @@ from telegram.ext import (
     filters
 )
 
-import config
-import database
 import core.utils.openai_utils as openai_utils
+import core.config.config as config
+from core.audio_handling.audio_transcription_service import convert_audio_to_text
+from core.bot.database import Database
 
 HELP_MESSAGE = """✏️ <b>Я розумію як текстові повідомлення</b>...
 🎤 ...так і <b>голосові</b>! Спробуй, це набагато зручніше
@@ -45,7 +46,7 @@ HELP_MESSAGE = """✏️ <b>Я розумію як текстові повідо
 START_MESSAGE = "Привіт 👋 Я AI помічник і в майбутньому — найвідоміший працівник Нової пошти. 🤖\n\n"
 
 # setup
-db = database.Database()
+db = Database()
 logger = logging.getLogger(__name__)
 
 user_semaphores = {}
@@ -188,7 +189,7 @@ async def message_handle(update: Update, context: CallbackContext, message=None,
         # in case of CancelledError
         n_input_tokens, n_output_tokens = 0, 0
         #current_model = db.get_user_attribute(user_id, "current_model")
-        current_model = "gpt-3.5-turbo"  # will be changed to 16k
+        current_model = "gpt-3.5-turbo"  # change to 16k later
 
         try:
             # send placeholder message to user
@@ -202,7 +203,6 @@ async def message_handle(update: Update, context: CallbackContext, message=None,
                  return
 
             dialog_messages = db.get_dialog_messages(user_id, dialog_id=None)
-            logging.error(dialog_messages)
             parse_mode = {
                 "html": ParseMode.HTML,
                 "markdown": ParseMode.MARKDOWN
@@ -329,11 +329,7 @@ async def voice_message_handle(update: Update, context: CallbackContext):
         pydub.AudioSegment.from_file(voice_ogg_path).export(voice_mp3_path, format="mp3")
 
         # transcribe
-        with open(voice_mp3_path, "rb") as f:
-            transcribed_text = await openai_utils.transcribe_audio(f)
-
-            if transcribed_text is None:
-                 transcribed_text = ""
+        transcribed_text = await convert_audio_to_text(str(voice_mp3_path))
 
     text = f"🎤: <i>{transcribed_text}</i>"
     await update.message.reply_text(text, parse_mode=ParseMode.HTML)
@@ -507,7 +503,7 @@ async def post_init(application: Application):
     ])
 
 
-def run_bot() -> None:
+def setup_bot() -> Application:
     application = (
         ApplicationBuilder()
         .token(config.telegram_token)
@@ -539,9 +535,4 @@ def run_bot() -> None:
 
     application.add_error_handler(error_handle)
 
-    # start the bot
-    application.run_polling()
-
-
-if __name__ == "__main__":
-    run_bot()
+    return application

@@ -7,6 +7,4 @@ ABBREVIATIONS_UK = "НП,ТТН,ЕН,ПІБ,грн,ТОВ,ФОП,ПП,ПАТ,К�
 async def convert_audio_to_text(local_input_file_path: str):
     transcription = openai.Audio.transcribe("whisper-1", open(local_input_file_path, 'rb'), language="uk",
                                             prompt=ABBREVIATIONS_UK)
-    if transcription is None:
-        transcription = ""
-    return transcription
+    return transcription["text"]
