@@ -4,7 +4,7 @@ import uuid
 from fastapi import APIRouter, UploadFile, WebSocket, WebSocketDisconnect
 from fastapi.responses import FileResponse
 
-from core.assistant.assistant_service import handle_audio_from_user, handle_json_from_user
+from core.assistant.assistant_service import handle_json_from_user, handle_audio_from_user
 
 controller = APIRouter(prefix='/voice-assistant')
 

@@ -1,10 +1,12 @@
-import tiktoken
 import openai
+import tiktoken
 
-import core.project_config as conf
+from core.config import config
 
 # setup openai
-conf.setup_openai_config()
+openai.api_key = config.openai_api_key
+if config.openai_api_base is not None:
+    openai.api_base = config.openai_api_base
 
 OPENAI_COMPLETION_OPTIONS = {
     "temperature": 0.7,
@@ -112,7 +114,7 @@ class ChatGPT:
         n_input_tokens, n_output_tokens), n_first_dialog_messages_removed  # sending final answer
 
     def _generate_prompt(self, message, dialog_messages, chat_mode):
-        prompt = conf.PROMPT_START
+        prompt = config.chat_modes[chat_mode]["prompt_start"]
         prompt += "\n\n"
 
         # add chat context
@@ -129,7 +131,7 @@ class ChatGPT:
         return prompt
 
     def _generate_prompt_messages(self, message, dialog_messages, chat_mode):
-        prompt = conf.PROMPT_START
+        prompt = config.chat_modes[chat_mode]["prompt_start"]
 
         messages = [{"role": "system", "content": prompt}]
         for dialog_message in dialog_messages:
