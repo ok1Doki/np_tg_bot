@@ -7,11 +7,22 @@ import core.project_config as conf
 conf.setup_openai_config()
 
 OPENAI_COMPLETION_OPTIONS = {
-    "temperature": 0.7,
+    "temperature": 1,
     "max_tokens": 1000,
     "top_p": 1,
     "frequency_penalty": 0,
-    "presence_penalty": 0
+    "presence_penalty": 0,
+    "functions": [],  # list of functions without params
+}
+
+OPENAI_FUNCTION_CALL_OPTIONS = {
+    "temperature": 0,
+    "max_tokens": 1000,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "functions": [],  # we will add 1 specific function here, with params
+    #"function_call": {"name": "fn_name"}  # used to call specific function
 }
 
 

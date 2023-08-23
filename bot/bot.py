@@ -31,7 +31,7 @@ from telegram.ext import (
 
 import config
 import database
-import openai_utils
+import core.utils.openai_utils as openai_utils
 
 HELP_MESSAGE = """✏️ <b>Я розумію як текстові повідомлення</b>...
 🎤 ...так і <b>голосові</b>! Спробуй, це набагато зручніше
@@ -187,7 +187,8 @@ async def message_handle(update: Update, context: CallbackContext, message=None,
 
         # in case of CancelledError
         n_input_tokens, n_output_tokens = 0, 0
-        current_model = db.get_user_attribute(user_id, "current_model")
+        #current_model = db.get_user_attribute(user_id, "current_model")
+        current_model = "gpt-3.5-turbo"  # will be changed to 16k
 
         try:
             # send placeholder message to user
