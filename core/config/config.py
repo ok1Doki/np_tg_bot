@@ -2,6 +2,7 @@ from pathlib import Path
 
 import dotenv
 import yaml
+from core.utils.function_utils import functions, function, property, PropertyType
 
 config_dir = Path(__file__).parent.parent.resolve() / "config"
 
@@ -26,3 +27,62 @@ mongodb_uri = f"mongodb://mongo:{config_env['MONGODB_PORT']}"
 # chat_modes
 with open(config_dir / "chat_modes.yml", 'r') as f:
     chat_modes = yaml.safe_load(f)
+
+
+# add functions without params to OPENAI_COMPLETION_OPTIONS['functions']
+# fn = lambda x: x**x  # any function, notice: below fn=fn is passed, not fn=fn()
+# YOUR_FUNCTION = function(fn=fn, name="fn_name", description="fn_description")
+# OPENAI_COMPLETION_OPTIONS['functions'].append(YOUR_FUNCTION.to_json())
+# name and description can be in any lang (uk) and gotta be descriptive/verbose for gpt.
+OPENAI_COMPLETION_OPTIONS = {
+    "temperature": 1,
+    "max_tokens": 1000,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    # list of functions without params, initialize it here.
+    "functions": [
+        function(fn=print, name="print", description="print function").to_json()  # stub
+    ],
+}
+
+
+# used to call specific function, use via:
+# core.chat.chat_service.get_function_call_options(your_function: function)
+# set function params/properties before passing:
+# (we will have a collection of funcs later)
+# YOUR_FUNCTION.properties.add(
+#         property(
+#             "property_name",
+#             PropertyType.string,
+#             "property_description"
+#         )
+# )
+# name and description can be in any lang (uk) and gotta be descriptive/verbose for gpt.
+# PropertyType also got integer and bool, and these can be set:
+# enum=['big', 'small']  # it doesn't strictly define options for gpt, only loosely
+# default=['small']  # default value
+OPENAI_FUNCTION_CALL_OPTIONS = {
+    "temperature": 0,
+    "max_tokens": 1000,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    #"functions": [YOUR_FUNCTION.to_json()],  # we will add 1 specific function here, with params
+    #"function_call": {"name": YOUR_FUNCTION.name}  # used to call specific function
+    "function_call": {}
+}
+
+# stub
+f = function(fn=print, name="print", description="print function")
+f.properties.add(
+    property(
+        "printText",
+        PropertyType.string,
+        "text to print",
+        default="default"
+    )
+)
+
+from core.chat.chat_service import get_function_call_options
+fn_call_opts = get_function_call_options(f)

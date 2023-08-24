@@ -1,5 +1,6 @@
 import openai
 import tiktoken
+import json
 
 from core.config import config
 
@@ -8,24 +9,7 @@ openai.api_key = config.openai_api_key
 if config.openai_api_base is not None:
     openai.api_base = config.openai_api_base
 
-OPENAI_COMPLETION_OPTIONS = {
-    "temperature": 1,
-    "max_tokens": 1000,
-    "top_p": 1,
-    "frequency_penalty": 0,
-    "presence_penalty": 0,
-    "functions": [],  # list of functions without params
-}
 
-OPENAI_FUNCTION_CALL_OPTIONS = {
-    "temperature": 0,
-    "max_tokens": 1000,
-    "top_p": 1,
-    "frequency_penalty": 0,
-    "presence_penalty": 0,
-    "functions": [],  # we will add 1 specific function here, with params
-    #"function_call": {"name": "fn_name"}  # used to call specific function
-}
 
 
 class ChatGPT:
@@ -43,7 +27,7 @@ class ChatGPT:
                     r = await openai.ChatCompletion.acreate(
                         model=self.model,
                         messages=messages,
-                        **OPENAI_COMPLETION_OPTIONS
+                        **config.OPENAI_COMPLETION_OPTIONS
                     )
                     answer = r.choices[0].message["content"]
                 elif self.model == "text-davinci-003":
@@ -51,7 +35,7 @@ class ChatGPT:
                     r = await openai.Completion.acreate(
                         engine=self.model,
                         prompt=prompt,
-                        **OPENAI_COMPLETION_OPTIONS
+                        **config.OPENAI_COMPLETION_OPTIONS
                     )
                     answer = r.choices[0].text
                 else:
@@ -82,7 +66,7 @@ class ChatGPT:
                         model=self.model,
                         messages=messages,
                         stream=True,
-                        **OPENAI_COMPLETION_OPTIONS
+                        **config.OPENAI_COMPLETION_OPTIONS
                     )
 
                     answer = ""
@@ -101,7 +85,7 @@ class ChatGPT:
                         engine=self.model,
                         prompt=prompt,
                         stream=True,
-                        **OPENAI_COMPLETION_OPTIONS
+                        **config.OPENAI_COMPLETION_OPTIONS
                     )
 
                     answer = ""
