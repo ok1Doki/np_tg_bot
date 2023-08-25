@@ -212,11 +212,11 @@ async def message_handle(update: Update, context: CallbackContext, message=None,
             if config.enable_message_streaming:
                 gen = chatgpt_instance.send_message_stream(_message, dialog_messages=dialog_messages, chat_mode=chat_mode)
             else:
-                answer, (n_input_tokens, n_output_tokens), n_first_dialog_messages_removed = await chatgpt_instance.send_message(
-                    _message,
-                    dialog_messages=dialog_messages,
-                    chat_mode=chat_mode
-                )
+                answer, (n_input_tokens, n_output_tokens), n_first_dialog_messages_removed \
+                    = await chatgpt_instance.send_message(
+                        _message,
+                        dialog_messages=dialog_messages,
+                        chat_mode=chat_mode)
 
                 async def fake_gen():
                     yield "finished", answer, (n_input_tokens, n_output_tokens), n_first_dialog_messages_removed

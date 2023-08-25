@@ -38,8 +38,9 @@ class properties(Dict):
 
 
 class function():
-    def __init__(self, fn, name: str, description: str):
-        self.fn = fn  # function to be executed
+    def __init__(self, fn, trigger_fn, name: str, description: str):
+        self.fn = fn  # function to be executed (with params)
+        self.trigger_fn = trigger_fn  # insert trigger fn for ui flow here
         self.name = name
         self.description = description
         self.properties = properties()
@@ -58,7 +59,16 @@ class function():
                  'parameters': {'type': 'object',
                                 'properties': self.properties_wo_required},
                  'required': self.required
-                 }
+                }
+        return funct
+    
+    # user for specific function call, like in OPENAI_FUNCTION_CALL_OPTIONS
+    def to_json_without_params(self):
+        funct = {'name': self.name,
+                 'description': self.description,
+                 'parameters': {'type': 'object',
+                                'properties': {}},
+                }
         return funct
 
 
@@ -85,8 +95,8 @@ class functions(_collections_abc.MutableMapping):
         return self._dict.__len__()
 
     # ChatGPT is expecting an List.
-    def to_json(self):
+    def to_json_without_params(self):
         l = []
         for item in self._dict:
-            l.append(self._dict[item].to_json())
+            l.append(self._dict[item].to_json_without_params())
         return l
