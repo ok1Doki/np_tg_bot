@@ -1,19 +1,62 @@
 import openai
 import tiktoken
+import json
 
 from core.config import config
+from core.utils.function_utils import functions, function, property, PropertyType
 
 # setup openai
 openai.api_key = config.openai_api_key
 if config.openai_api_base is not None:
     openai.api_base = config.openai_api_base
 
+# stubs for functions
+def my_fn(**kwargs):
+    arg1 = kwargs["printText"]
+    return arg1
+
+def trigger_fn():
+    pass
+
+# name and description can be in any lang (uk) and gotta be descriptive/verbose for gpt.
+# PropertyType also got integer and bool, and these can be set:
+# enum=['big', 'small']  # it doesn't strictly define options for gpt, only loosely
+# default=['small']  # default value
+f = function(fn=my_fn, trigger_fn=trigger_fn, name="print", description="print function")
+f.properties.add(
+    property(
+        "printText",
+        PropertyType.string,
+        "text to print",
+        default="default"
+    )
+)
+fns_collection = functions()
+fns_collection[f.name] = f
+
 OPENAI_COMPLETION_OPTIONS = {
-    "temperature": 0.7,
+    "temperature": 1,
     "max_tokens": 1000,
     "top_p": 1,
     "frequency_penalty": 0,
-    "presence_penalty": 0
+    "presence_penalty": 0,
+    "functions": [],  # list of functions without params
+}
+# stub
+# OPENAI_COMPLETION_OPTIONS['functions'] = fns_collection.to_json_without_params()
+OPENAI_COMPLETION_OPTIONS['functions'] = [f.to_json()]
+
+# used to call a specific function.
+# we will set 1 specific function with params here, via:
+# generate_fn_call_options(your_function: function) -> dict:
+OPENAI_FUNCTION_CALL_OPTIONS = {
+    "temperature": 0,
+    "max_tokens": 1000,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "functions": [],
+    "function_call": {}
 }
 
 
@@ -25,6 +68,7 @@ class ChatGPT:
     async def send_message(self, message, dialog_messages=[], chat_mode="assistant"):
         n_dialog_messages_before = len(dialog_messages)
         answer = None
+        fn_call_res = None
         while answer is None:
             try:
                 if self.model in {"gpt-3.5-turbo-16k", "gpt-3.5-turbo", "gpt-4"}:
@@ -35,16 +79,20 @@ class ChatGPT:
                         **OPENAI_COMPLETION_OPTIONS
                     )
                     answer = r.choices[0].message["content"]
-                elif self.model == "text-davinci-003":
-                    prompt = self._generate_prompt(message, dialog_messages, chat_mode)
-                    r = await openai.Completion.acreate(
-                        engine=self.model,
-                        prompt=prompt,
-                        **OPENAI_COMPLETION_OPTIONS
-                    )
-                    answer = r.choices[0].text
-                else:
-                    raise ValueError(f"Unknown model: {self.model}")
+                    if "function_call" in r.choices[0].message:
+                        fn_name = r.choices[0].message["function_call"]["name"]
+                        fns_collection[fn_name].trigger_fn()
+                        # here we got function suggestion without params.
+                        # use trigger_fn to trigger ui flow here to get params from user.
+                        # below, we will call specific function with params.
+                        # swap messages[-1]["content"] to user input.
+                        if fn_name in fns_collection:
+                            fn_call_res = await self.send_function_call(
+                                your_function=fns_collection[fn_name], 
+                                input=messages[-1]["content"],
+                                chat_mode=chat_mode
+                            )
+                            answer = str(fn_call_res)
 
                 answer = self._postprocess_answer(answer)
                 n_input_tokens, n_output_tokens = r.usage.prompt_tokens, r.usage.completion_tokens
@@ -54,64 +102,41 @@ class ChatGPT:
                         "Dialog messages is reduced to zero, but still has too many tokens to make completion") from e
 
                 # forget first message in dialog_messages
-                dialog_messages = dialog_messages[1:]
+                # dialog_messages = dialog_messages[1:]
+                # context management later.
 
         n_first_dialog_messages_removed = n_dialog_messages_before - len(dialog_messages)
 
         return answer, (n_input_tokens, n_output_tokens), n_first_dialog_messages_removed
 
-    async def send_message_stream(self, message, dialog_messages=[], chat_mode="assistant"):
-        n_dialog_messages_before = len(dialog_messages)
-        answer = None
-        while answer is None:
-            try:
-                if self.model in {"gpt-3.5-turbo-16k", "gpt-3.5-turbo", "gpt-4"}:
-                    messages = self._generate_prompt_messages(message, dialog_messages, chat_mode)
-                    r_gen = await openai.ChatCompletion.acreate(
-                        model=self.model,
-                        messages=messages,
-                        stream=True,
-                        **OPENAI_COMPLETION_OPTIONS
-                    )
+    # used to call specific function. args:
+    # function_utils.function - with params
+    # message - user message containing info for function call
+    async def send_function_call(self, your_function: function, input: str, chat_mode="assistant"):
+        r = None
+        fn_call_res = None
+        while r is None:
+            if self.model in {"gpt-3.5-turbo-16k", "gpt-3.5-turbo", "gpt-4"}:
+                messages = self.generate_fn_call_messages(input, chat_mode)
+                r = await openai.ChatCompletion.acreate(
+                    model=self.model,
+                    messages=messages,
+                    **self.generate_fn_call_options(your_function)
+                )
+                # answer = r.choices[0].message["content"]
+                if "function_call" in r.choices[0].message:
+                    fn_name = r.choices[0].message["function_call"]["name"]
+                    try:
+                        fn_args = json.loads(r.choices[0].message["function_call"]["arguments"])
+                        if fn_name in fns_collection:
+                            fn_call_res = fns_collection[fn_name].fn(**fn_args)  # function call
+                    except json.decoder.JSONDecodeError as e:
+                        print("Error decoding json:", r.choices[0].message["function_call"]["arguments"])
+                        raise e
+                else:
+                    raise ValueError("No function call in response")
 
-                    answer = ""
-                    async for r_item in r_gen:
-                        delta = r_item.choices[0].delta
-                        if "content" in delta:
-                            answer += delta.content
-                            n_input_tokens, n_output_tokens = self._count_tokens_from_messages(messages, answer,
-                                                                                               model=self.model)
-                            n_first_dialog_messages_removed = n_dialog_messages_before - len(dialog_messages)
-                            yield "not_finished", answer, (
-                            n_input_tokens, n_output_tokens), n_first_dialog_messages_removed
-                elif self.model == "text-davinci-003":
-                    prompt = self._generate_prompt(message, dialog_messages, chat_mode)
-                    r_gen = await openai.Completion.acreate(
-                        engine=self.model,
-                        prompt=prompt,
-                        stream=True,
-                        **OPENAI_COMPLETION_OPTIONS
-                    )
-
-                    answer = ""
-                    async for r_item in r_gen:
-                        answer += r_item.choices[0].text
-                        n_input_tokens, n_output_tokens = self._count_tokens_from_prompt(prompt, answer,
-                                                                                         model=self.model)
-                        n_first_dialog_messages_removed = n_dialog_messages_before - len(dialog_messages)
-                        yield "not_finished", answer, (n_input_tokens, n_output_tokens), n_first_dialog_messages_removed
-
-                answer = self._postprocess_answer(answer)
-
-            except openai.error.InvalidRequestError as e:  # too many tokens
-                if len(dialog_messages) == 0:
-                    raise e
-
-                # forget first message in dialog_messages
-                dialog_messages = dialog_messages[1:]
-
-        yield "finished", answer, (
-        n_input_tokens, n_output_tokens), n_first_dialog_messages_removed  # sending final answer
+        return fn_call_res
 
     def _generate_prompt(self, message, dialog_messages, chat_mode):
         prompt = config.chat_modes[chat_mode]["prompt_start"]
@@ -140,6 +165,19 @@ class ChatGPT:
         messages.append({"role": "user", "content": message})
 
         return messages
+    
+    def generate_fn_call_messages(self, input: str, chat_mode) -> list:
+        prompt = config.chat_modes[chat_mode]["prompt_start"]
+
+        messages = [{"role": "system", "content": prompt}]  # work on prompt mb
+        messages.append({"role": "user", "content": input})
+
+        return messages
+
+    def generate_fn_call_options(self, your_function: function) -> dict:
+        OPENAI_FUNCTION_CALL_OPTIONS['functions']=[your_function.to_json()]
+        OPENAI_FUNCTION_CALL_OPTIONS['function_call']={'name': your_function.name}
+        return OPENAI_FUNCTION_CALL_OPTIONS
 
     def _postprocess_answer(self, answer):
         answer = answer.strip()

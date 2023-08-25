@@ -188,7 +188,8 @@ async def message_handle(update: Update, context: CallbackContext, message=None,
 
         # in case of CancelledError
         n_input_tokens, n_output_tokens = 0, 0
-        current_model = db.get_user_attribute(user_id, "current_model")
+        #current_model = db.get_user_attribute(user_id, "current_model")
+        current_model = "gpt-3.5-turbo"  # change to 16k later
 
         try:
             # send placeholder message to user
@@ -211,11 +212,11 @@ async def message_handle(update: Update, context: CallbackContext, message=None,
             if config.enable_message_streaming:
                 gen = chatgpt_instance.send_message_stream(_message, dialog_messages=dialog_messages, chat_mode=chat_mode)
             else:
-                answer, (n_input_tokens, n_output_tokens), n_first_dialog_messages_removed = await chatgpt_instance.send_message(
-                    _message,
-                    dialog_messages=dialog_messages,
-                    chat_mode=chat_mode
-                )
+                answer, (n_input_tokens, n_output_tokens), n_first_dialog_messages_removed \
+                    = await chatgpt_instance.send_message(
+                        _message,
+                        dialog_messages=dialog_messages,
+                        chat_mode=chat_mode)
 
                 async def fake_gen():
                     yield "finished", answer, (n_input_tokens, n_output_tokens), n_first_dialog_messages_removed
