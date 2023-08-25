@@ -4,35 +4,12 @@ import json
 
 from core.config import config
 from core.utils.function_utils import functions, function, property, PropertyType
+from core.utils.function_utils import fns_collection
 
 # setup openai
 openai.api_key = config.openai_api_key
 if config.openai_api_base is not None:
     openai.api_base = config.openai_api_base
-
-# stubs for functions
-def my_fn(**kwargs):
-    arg1 = kwargs["printText"]
-    return arg1
-
-def trigger_fn():
-    pass
-
-# name and description can be in any lang (uk) and gotta be descriptive/verbose for gpt.
-# PropertyType also got integer and bool, and these can be set:
-# enum=['big', 'small']  # it doesn't strictly define options for gpt, only loosely
-# default=['small']  # default value
-f = function(fn=my_fn, trigger_fn=trigger_fn, name="print", description="print function")
-f.properties.add(
-    property(
-        "printText",
-        PropertyType.string,
-        "text to print",
-        default="default"
-    )
-)
-fns_collection = functions()
-fns_collection[f.name] = f
 
 OPENAI_COMPLETION_OPTIONS = {
     "temperature": 1,
@@ -42,9 +19,9 @@ OPENAI_COMPLETION_OPTIONS = {
     "presence_penalty": 0,
     "functions": [],  # list of functions without params
 }
-# stub
-# OPENAI_COMPLETION_OPTIONS['functions'] = fns_collection.to_json_without_params()
-OPENAI_COMPLETION_OPTIONS['functions'] = [f.to_json()]
+
+OPENAI_COMPLETION_OPTIONS['functions'] = fns_collection.to_json_without_params()
+# OPENAI_COMPLETION_OPTIONS['functions'] = [f.to_json()]
 
 # used to call a specific function.
 # we will set 1 specific function with params here, via:
@@ -61,7 +38,7 @@ OPENAI_FUNCTION_CALL_OPTIONS = {
 
 
 class ChatGPT:
-    def __init__(self, model="gpt-3.5-turbo"):
+    def __init__(self, model=config.openai_model):
         assert model in {"text-davinci-003", "gpt-3.5-turbo-16k", "gpt-3.5-turbo", "gpt-4"}, f"Unknown model: {model}"
         self.model = model
 
@@ -183,7 +160,7 @@ class ChatGPT:
         answer = answer.strip()
         return answer
 
-    def _count_tokens_from_messages(self, messages, answer, model="gpt-3.5-turbo"):
+    def _count_tokens_from_messages(self, messages, answer, model=config.openai_model):
         encoding = tiktoken.encoding_for_model(model)
 
         if model == "gpt-3.5-turbo-16k":

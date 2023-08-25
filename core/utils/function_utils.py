@@ -100,3 +100,30 @@ class functions(_collections_abc.MutableMapping):
         for item in self._dict:
             l.append(self._dict[item].to_json_without_params())
         return l
+
+
+# stubs for functions
+def my_fn(**kwargs):
+    arg1 = kwargs["printText"]
+    return arg1
+
+def trigger_fn():
+    pass
+
+# name and description can be in any lang (uk) and gotta be descriptive/verbose for gpt.
+# PropertyType also got integer and bool, and these can be set:
+# enum=['big', 'small']  # it doesn't strictly define options for gpt, only loosely
+# default=['small']  # default value
+f = function(fn=my_fn, trigger_fn=trigger_fn, name="print", description="print function")
+f.properties.add(
+    property(
+        "printText",
+        PropertyType.string,
+        "text to print",
+        default="default"
+    )
+)
+
+# the collection of functions to be used with gpt
+fns_collection = functions()
+fns_collection[f.name] = f

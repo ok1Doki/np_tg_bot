@@ -16,6 +16,7 @@ config_env = dotenv.dotenv_values(config_dir / "config.env")
 telegram_token = config_yaml["telegram_token"]
 openai_api_key = config_yaml["openai_api_key"]
 openai_api_base = config_yaml.get("openai_api_base", None)
+openai_model = config_yaml["openai_model"]
 novaposhta_api_key = config_yaml["novaposhta_api_key"]
 novaposhta_api_url = config_yaml["novaposhta_api_url"]
 allowed_telegram_usernames = config_yaml["allowed_telegram_usernames"]

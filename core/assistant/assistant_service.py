@@ -1,5 +1,6 @@
 from datetime import datetime
 
+import core.config.config as config
 import core.utils.openai_utils as openai_utils
 from core.audio_handling.audio_generation_service import convert_text_to_audio
 from core.audio_handling.audio_transcription_service import convert_audio_to_text
@@ -21,7 +22,7 @@ async def handle_audio_from_user(session_id: str,
     if user_text_callback is not None:
         await user_text_callback(user_message)
 
-    chatgpt_instance = openai_utils.ChatGPT(model='gpt-3.5-turbo-16k')
+    chatgpt_instance = openai_utils.ChatGPT(model=config.openai_model)
     ai_text_reply = await chatgpt_instance.send_message(user_message, dialog_messages=messages_history[session_id])
 
     if ai_text_callback is not None:
