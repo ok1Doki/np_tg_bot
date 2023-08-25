@@ -137,6 +137,3 @@ docker-compose.dev.yml
 mongodb/
 
 .idea
-core/config/config.example.env
-
-core/config/config.example.yml
