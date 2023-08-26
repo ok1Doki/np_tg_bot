@@ -6,8 +6,8 @@ from core.novaposhta.util.base_request import Request
 from core.novaposhta.util.base_response import Response
 
 
-async def get_document_price(city_sender, city_recipient, weight, service_type, cost, cargo_type,
-                             seats_amount) -> Response:
+async def get_document_price(city_sender, city_recipient, weight, cost, cargo_type, seats_amount,
+                             service_type='WarehouseWarehouse') -> Response:
     redelivery_calculate = RedeliveryCalculate(
         CargoType="Money",
         Amount="100"

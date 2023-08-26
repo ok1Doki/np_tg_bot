@@ -7,7 +7,7 @@ from core.novaposhta.delivery_time.request import DocumentDeliveryDateRequestPro
 from core.novaposhta.util.base_request import Request
 
 
-async def get_document_delivery_date(city_sender, city_recipient, service_type):
+async def get_document_delivery_date(city_sender, city_recipient, service_type='WarehouseWarehouse'):
     method_properties = DocumentDeliveryDateRequestProperties(
         DateTime=datetime.now().strftime("%d.%m.%Y"),
         ServiceType=service_type,

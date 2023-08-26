@@ -13,7 +13,6 @@ async def create_express_waybill(payer_type,
                                  date_time,
                                  cargo_type,
                                  weight,
-                                 service_type,
                                  seats_amount,
                                  description,
                                  cost,
@@ -26,7 +25,9 @@ async def create_express_waybill(payer_type,
                                  recipient,
                                  recipient_address,
                                  contact_recipient,
-                                 recipients_phone) -> Response:
+                                 recipients_phone,
+                                 service_type='WarehouseWarehouse'
+                                 ) -> Response:
     method_properties = CreateExpressWaybillRequestProperties(
         SenderWarehouseIndex="101/102",  # ?
         RecipientWarehouseIndex="101/102",  # ?
