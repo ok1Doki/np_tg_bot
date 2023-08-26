@@ -1,7 +1,10 @@
 import _collections_abc
 from typing import Dict, List
 from enum import Enum
-import novaposhta as np
+import core.novaposhta.delivery_time.client as delivery_time
+import core.novaposhta.document_price.client as document_price
+import core.novaposhta.tracking.client as tracking
+import core.novaposhta.express_waybill.client as express_waybill
 
 
 class PropertyType(str, Enum):
@@ -111,7 +114,8 @@ def my_fn(**kwargs):
 def trigger_fn():
     pass
 
-# name and description can be in any lang (uk) and gotta be descriptive/verbose for gpt.
+# description can be in any lang (uk) and gotta be descriptive/verbose for gpt.
+# name has to be in english.
 # PropertyType also got integer and bool, and these can be set:
 # enum=['big', 'small']  # it doesn't strictly define options for gpt, only loosely
 # default=['small']  # default value
@@ -130,9 +134,9 @@ fns_collection = functions()
 fns_collection[f.name] = f
 
 # get_document_delivery_date(city_sender, city_recipient, service_type):
-f1 = function(fn=np.delivery_time.get_document_delivery_date, 
+f1 = function(fn=delivery_time.get_document_delivery_date, 
               trigger_fn=trigger_fn,  # insert trigger fn for ui flow here
-              name="ПрогнозДатиДоставки", 
+              name="get_document_delivery_date", 
               description="Прогноз орієнтовної дати доставки вантажу")
 f1.properties.add(property("city_sender", PropertyType.string, "Населений пункт відправника"))
 f1.properties.add(property("city_recipient", PropertyType.string, "Населений пункт отримувача"))
@@ -140,9 +144,9 @@ f1.properties.add(property("city_recipient", PropertyType.string, "Населе�
 # f1.properties.add(property("service_type", PropertyType.string, "Тип доставки"))
 
 # get_document_price(city_sender, city_recipient, weight, service_type, cost, cargo_type, seats_amount)
-f2 = function(fn=np.get_document_price, 
+f2 = function(fn=document_price.get_document_price, 
               trigger_fn=trigger_fn, 
-              name="РозрахуватиВартість", 
+              name="get_document_price", 
               description="Розрахунок вартості послуг доставки вантажу, \
               шин та дисків, палет, а також документів.")
 f2.properties.add(property("city_sender", PropertyType.string, "Населений пункт відправника"))
@@ -150,15 +154,15 @@ f2.properties.add(property("city_recipient", PropertyType.string, "Населе�
 f2.properties.add(property("weight", PropertyType.integer, "Вага вантажу"))
 # f2.properties.add(property("service_type", PropertyType.string, "Тип доставки"))
 f2.properties.add(property("cost", PropertyType.integer, "Оціночна вартість вантажу (ціле число)"))
-f2.properties.add(property("cargo_type", PropertyType.string, "Тип вантажу"), 
+f2.properties.add(property("cargo_type", PropertyType.string, "Тип вантажу", 
                   enum=['Cargo', 'Documents', 'TiresWheels', 'Pallet'],  # gpt should be smart enough
-                  default='Cargo')
+                  default='Cargo'))
 
 # get_status_documents(document_number, phone) -> Response:
-f3 = function(fn=np.get_status_documents, 
+f3 = function(fn=tracking.get_status_documents, 
               trigger_fn=trigger_fn, 
-              name="Трекінг", 
-              description="цей метод дозволяє переглядати інформацію щодо статусу відправлення")
+              name="get_status_documents", 
+              description="це трекінг, дозволяє переглядати інформацію щодо статусу відправлення")
 f3.properties.add(property("document_number", PropertyType.string,
                            "Номер ЕН або ТТН (номер відправлення, номер накладної)"))
 f3.properties.add(property("phone", PropertyType.string, "Номер телефону одержувача/відправника"))
@@ -181,19 +185,19 @@ f3.properties.add(property("phone", PropertyType.string, "Номер телеф�
                         #  recipient_address,
                         #  contact_recipient,
                         #  recipients_phone) -> Response:
-f4 = function(fn=np.express_waybill.create_express_waybill, 
+f4 = function(fn=express_waybill.create_express_waybill, 
               trigger_fn=trigger_fn, 
-              name="СтворитиЕН", 
-              description="Створення електронної накладної, яка використовується для доставки вантажу")
-f4.properties.add(property("payer_type", PropertyType.string, "Тип платника"), 
+              name="create_express_waybill", 
+              description="Створення електронної накладної (ЕН), яка використовується для доставки вантажу")
+f4.properties.add(property("payer_type", PropertyType.string, "Тип платника", 
                   enum=['Sender', 'Recipient', 'ThirdPerson'],  # gpt should be smart enough
-                  default='Recipient')
+                  default='Recipient'))
 f4.properties.add(property("payment_method", PropertyType.string, "Спосіб оплати",
                            enum=['Cash', 'NonCash']))
 f4.properties.add(property("date_time", PropertyType.string, "Дата відправлення в форматі ДД.ММ.РРРР"))
-f4.properties.add(property("cargo_type", PropertyType.string, "Тип вантажу"),
+f4.properties.add(property("cargo_type", PropertyType.string, "Тип вантажу",
                     enum=['Cargo', 'Documents', 'TiresWheels', 'Pallet'],
-                    default='Cargo')
+                    default='Cargo'))
 f4.properties.add(property("weight", PropertyType.integer, "Фактична вага, в кг min - 0.1"))
 f4.properties.add(property("seats_amount", PropertyType.integer, "Кількість місць відправлення, ціле число"))
 f4.properties.add(property("description", PropertyType.string, "Опис вантажу"))
