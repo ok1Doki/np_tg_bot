@@ -138,7 +138,6 @@ f1.properties.add(property("city_sender", PropertyType.string, "Населени
 f1.properties.add(property("city_recipient", PropertyType.string, "Населений пункт отримувача"))
 # i suggest remove service_type and make it a default value WarehouseWarehouse for now.
 # f1.properties.add(property("service_type", PropertyType.string, "Тип доставки"))
-fns_collection[f1.name] = f1
 
 # get_document_price(city_sender, city_recipient, weight, service_type, cost, cargo_type, seats_amount)
 f2 = function(fn=np.get_document_price, 
@@ -154,7 +153,6 @@ f2.properties.add(property("cost", PropertyType.integer, "Оціночна ва�
 f2.properties.add(property("cargo_type", PropertyType.string, "Тип вантажу"), 
                   enum=['Cargo', 'Documents', 'TiresWheels', 'Pallet'],  # gpt should be smart enough
                   default='Cargo')
-fns_collection[f2.name] = f2
 
 # get_status_documents(document_number, phone) -> Response:
 f3 = function(fn=np.get_status_documents, 
@@ -164,7 +162,6 @@ f3 = function(fn=np.get_status_documents,
 f3.properties.add(property("document_number", PropertyType.string,
                            "Номер ЕН або ТТН (номер відправлення, номер накладної)"))
 f3.properties.add(property("phone", PropertyType.string, "Номер телефону одержувача/відправника"))
-fns_collection[f3.name] = f3
 
 # create_express_waybill(  payer_type,
                         #  payment_method,
@@ -211,4 +208,8 @@ f4.properties.add(property("recipient", PropertyType.string, "номер тел�
 f4.properties.add(property("recipient_address", PropertyType.string, "Адреса отримувача"))
 f4.properties.add(property("contact_recipient", PropertyType.string, "Контактна особа отримувача"))  # ?
 f4.properties.add(property("recipients_phone", PropertyType.string, "номер телефону отримувача"))
+
+fns_collection[f1.name] = f1
+fns_collection[f2.name] = f2
+fns_collection[f3.name] = f3
 fns_collection[f4.name] = f4

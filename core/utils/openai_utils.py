@@ -62,7 +62,7 @@ class ChatGPT:
                         # here we got function suggestion without params.
                         # use trigger_fn to trigger ui flow here to get params from user.
                         # below, we will call specific function with params.
-                        # swap messages[-1]["content"] to user input.
+                        # swap messages[-1]["content"] to user input. this is "last user message".
                         if fn_name in fns_collection:
                             fn_call_res = await self.send_function_call(
                                 your_function=fns_collection[fn_name], 
@@ -88,7 +88,7 @@ class ChatGPT:
 
     # used to call specific function. args:
     # function_utils.function - with params
-    # message - user message containing info for function call
+    # input - user message containing info for function call
     async def send_function_call(self, your_function: function, input: str, chat_mode="assistant"):
         r = None
         fn_call_res = None
@@ -107,6 +107,7 @@ class ChatGPT:
                         fn_args = json.loads(r.choices[0].message["function_call"]["arguments"])
                         if fn_name in fns_collection:
                             fn_call_res = fns_collection[fn_name].fn(**fn_args)  # function call
+                            # fn_call_res = str(r.choices[0].message["function_call"])  # use this for testing
                     except json.decoder.JSONDecodeError as e:
                         print("Error decoding json:", r.choices[0].message["function_call"]["arguments"])
                         raise e
