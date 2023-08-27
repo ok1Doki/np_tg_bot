@@ -5,6 +5,9 @@ import requests
 
 from core.config import config
 
+MAX_RETRIES = 10
+RETRY_DELAY = 20
+
 
 def get_dict(model_name, called_method, fields, method_props=None):
     response = send_request(called_method, method_props, model_name)
@@ -29,8 +32,17 @@ def send_request(called_method, method_props, model_name):
         "calledMethod": called_method,
         "methodProperties": (method_props if method_props is not None else {})
     }
-    response = requests.get(config.novaposhta_api_url, json=request)
-    return response
+    retries = 0
+    while retries < MAX_RETRIES:
+        try:
+            response = requests.get(config.novaposhta_api_url, json=request)
+            response.raise_for_status()
+            return response
+        except Exception as e:
+            print(f"Request Exception (Attempt {retries + 1}):", e)
+            retries += 1
+            time.sleep(RETRY_DELAY)
+    return None
 
 
 def save_to_json(json_objects_list, output_file_path):
@@ -276,12 +288,16 @@ def get_cities_with_streets():
                 if element not in cities_fields:
                     city.pop(element)
             cities_list.append(city)
-        # save_to_json(cities_list, 'getCities.json')
+        save_to_json(cities_list, 'getCities.json')
 
-    chunk_size = 3000
+    chunk_size = 2000
     for i in range(0, len(cities_list), chunk_size):
         streets_list = []
-        for city in cities_list[i:i + chunk_size]:
+        for city_ind in range(i, min(len(cities_list), i + chunk_size)):
+            city = cities_list[city_ind]
+            print(city_ind)
+            if city_ind % 10 == 0:
+                time.sleep(4)
             street_response = send_request("getStreet", {"CityRef": city['Ref']}, "Address")
             if street_response.status_code == 200:
                 street_data = street_response.json()['data']
@@ -289,6 +305,7 @@ def get_cities_with_streets():
                     for element in list(street):
                         if element not in street_fields:
                             street.pop(element)
+                    street["CityRef"] = city["Ref"]
                     streets_list.append(street)
         save_to_json(streets_list, "getStreets-" + str(i) + ".json")
 

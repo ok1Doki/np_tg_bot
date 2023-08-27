@@ -1,0 +1,1502 @@
+[
+  {
+    "Ref": "0e451e40-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Абазівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ade6ea-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Полтавський р-н",
+    "Area": "dcaadf02-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Полтавська область"
+  },
+  {
+    "Ref": "0e6f1c37-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Абазівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aa4a9d-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Зачепилівський р-н",
+    "Area": "dcaae3a1-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Харківська область"
+  },
+  {
+    "Ref": "0e3cc154-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Абрамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ade1dc-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Машівський р-н",
+    "Area": "dcaadf02-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Полтавська область"
+  },
+  {
+    "Ref": "0e717643-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Абрамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aeee88-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Вишгородський р-н",
+    "Area": "dcaadb64-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Київська"
+  },
+  {
+    "Ref": "0de5a63f-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Абрамівська Долина",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b0031f-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Чернівецький р-н",
+    "Area": "dcaad5a7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Вінницька область"
+  },
+  {
+    "Ref": "0e56fcde-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Абрамок",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab32de-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Новоград-Волинський р-н",
+    "Area": "dcaad8fb-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Житомирська область"
+  },
+  {
+    "Ref": "0da7f592-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Абранка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab596b-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Воловецький р-н",
+    "Area": "dcaad993-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Закарпатська область"
+  },
+  {
+    "Ref": "0ddee0f8-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced12-f210-11e3-8c4a-0050568002cf",
+    "Description": "Абрикосівка",
+    "SettlementTypeDescription": "селище",
+    "Region": "e4aa775b-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Олешківський",
+    "Area": "dcaae44b-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Херсонська область"
+  },
+  {
+    "Ref": "0e3b6bda-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Абрикосівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab7d96-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Михайлівський р-н",
+    "Area": "dcaada26-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Запорізька область"
+  },
+  {
+    "Ref": "0ea91a2d-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Абрикосівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aa874f-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Кам'янець-Подільський р-н",
+    "Area": "dcaae4e5-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Хмельницька область"
+  },
+  {
+    "Ref": "0db612b6-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Абрикосове",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad59d7-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Білгород-Дністровський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0df2189a-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced12-f210-11e3-8c4a-0050568002cf",
+    "Description": "Авангард",
+    "SettlementTypeDescription": "селище",
+    "Region": "e4b07980-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "П'ятихатський р-н",
+    "Area": "dcaad735-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Дніпропетровська область"
+  },
+  {
+    "Ref": "0e24bfb8-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Авангард",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab77d3-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Веселівський р-н",
+    "Area": "dcaada26-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Запорізька область"
+  },
+  {
+    "Ref": "0e390580-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced12-f210-11e3-8c4a-0050568002cf",
+    "Description": "Авангард",
+    "SettlementTypeDescription": "селище",
+    "Region": "e4ac0b12-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Кривий Ріг",
+    "Area": "dcaad735-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Дніпропетровська область"
+  },
+  {
+    "Ref": "0eacfd93-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced11-f210-11e3-8c4a-0050568002cf",
+    "Description": "Авангард",
+    "SettlementTypeDescription": "селище міського типу",
+    "Region": "e4ad6649-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Овідіопольський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0e32b911-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Августинівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab7a38-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Запорізький р-н",
+    "Area": "dcaada26-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Запорізька область"
+  },
+  {
+    "Ref": "0d7c5d6e-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Августівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ae8395-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Козівський р-н",
+    "Area": "dcaae303-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Тернопільська область"
+  },
+  {
+    "Ref": "0dc0a4fe-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Августівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad5ad1-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Біляївський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0e30ee81-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Августівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aaebc7-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Ічнянський р-н",
+    "Area": "dcaae6a8-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Чернігівська область"
+  },
+  {
+    "Ref": "0e848781-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Авдіївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aaeecc-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Куликівський р-н",
+    "Area": "dcaae6a8-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Чернігівська область"
+  },
+  {
+    "Ref": "0ea7c93d-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Авдіївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aaf44e-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Сосницький р-н",
+    "Area": "dcaae6a8-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Чернігівська область"
+  },
+  {
+    "Ref": "e71405ee-4b33-11e4-ab6d-005056801329",
+    "SettlementType": "563ced10-f210-11e3-8c4a-0050568002cf",
+    "Description": "Авдіївка",
+    "SettlementTypeDescription": "місто",
+    "Region": "e4ac7f36-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Авдіївка",
+    "Area": "dcaad81c-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Донецька область"
+  },
+  {
+    "Ref": "0e285b33-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Авдотівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4abe8a6-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Софіївський р-н",
+    "Area": "dcaad735-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Дніпропетровська область"
+  },
+  {
+    "Ref": "0db614d6-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Авидівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad59d7-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Білгород-Дністровський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "6604ffa8-20bb-11ea-b89e-0025b501a04b",
+    "SettlementType": "563ced10-f210-11e3-8c4a-0050568002cf",
+    "Description": "Авіамістечко",
+    "SettlementTypeDescription": "місто",
+    "Region": "e4ab7ccd-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Мелітопольський р-н",
+    "Area": "dcaada26-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Запорізька область"
+  },
+  {
+    "Ref": "0d7f766c-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced11-f210-11e3-8c4a-0050568002cf",
+    "Description": "Авіаторське",
+    "SettlementTypeDescription": "селище міського типу",
+    "Region": "e4ac0969-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Дніпровська",
+    "Area": "dcaad735-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Дніпропетровська область"
+  },
+  {
+    "Ref": "0dbad3bb-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Авксенівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b03847-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Верхньодніпровський р-н",
+    "Area": "dcaad735-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Дніпропетровська область"
+  },
+  {
+    "Ref": "0df3cdf1-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Авраменкове",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ae5857-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Роменський р-н",
+    "Area": "dcaae036-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Сумська область"
+  },
+  {
+    "Ref": "0db9ef67-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Аврамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b03731-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Васильківський р-н",
+    "Area": "dcaad735-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Дніпропетровська область"
+  },
+  {
+    "Ref": "0e3bdb1c-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Аврамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b16639-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Монастирищенський р-н",
+    "Area": "dcaae57c-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Черкаська область"
+  },
+  {
+    "Ref": "0e5f9ac9-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Аврамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b0c87e-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Кіровоградський р-н",
+    "Area": "dcaadbf9-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Кіровоградська область"
+  },
+  {
+    "Ref": "0dee6b14-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Аврамківщина",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ae56a6-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Охтирський р-н",
+    "Area": "dcaae036-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Сумська область"
+  },
+  {
+    "Ref": "0e4b3a47-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Авратин",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab308d-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Любарський р-н",
+    "Area": "dcaad8fb-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Житомирська область"
+  },
+  {
+    "Ref": "0e9cb60e-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Авратин",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aa82f2-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Волочиський р-н",
+    "Area": "dcaae4e5-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Хмельницька область"
+  },
+  {
+    "Ref": "0e76b7a4-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Автуничі",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aaeafb-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Городнянський р-н",
+    "Area": "dcaae6a8-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Чернігівська область"
+  },
+  {
+    "Ref": "0dc56dc8-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Агаймани",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aa6c89-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Іванівський р-н",
+    "Area": "dcaae44b-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Херсонська область"
+  },
+  {
+    "Ref": "0e3201e4-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Агатівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab1b09-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Бердичівський р-н",
+    "Area": "dcaad8fb-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Житомирська область"
+  },
+  {
+    "Ref": "0de2d4de-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Агафіївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad646f-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Любашівський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0de2d704-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Агеївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad646f-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Любашівський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0e2372d3-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Аграфенівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab789b-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Вільнянський р-н",
+    "Area": "dcaada26-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Запорізька область"
+  },
+  {
+    "Ref": "0d82a596-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced12-f210-11e3-8c4a-0050568002cf",
+    "Description": "Агробаза",
+    "SettlementTypeDescription": "селище",
+    "Region": "e4ac79f5-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Мангушський",
+    "Area": "dcaad81c-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Донецька область"
+  },
+  {
+    "Ref": "e7140a59-4b33-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Агрономічне",
+    "SettlementTypeDescription": "село",
+    "Region": "e4af9625-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Вінницький р-н",
+    "Area": "dcaad5a7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Вінницька область"
+  },
+  {
+    "Ref": "0ddb1987-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Агрономія",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ace6fe-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Арбузинський р-н",
+    "Area": "dcaaddd7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Миколаївська область"
+  },
+  {
+    "Ref": "0dbad640-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адалимівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b03847-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Верхньодніпровський р-н",
+    "Area": "dcaad735-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Дніпропетровська область"
+  },
+  {
+    "Ref": "0eafa9af-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамів",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aa8a6d-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Полонський р-н",
+    "Area": "dcaae4e5-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Хмельницька область"
+  },
+  {
+    "Ref": "0d82d892-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ac7af8-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Слов'янський р-н",
+    "Area": "dcaad81c-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Донецька область"
+  },
+  {
+    "Ref": "0dab2120-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ace160-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Врадіївський р-н",
+    "Area": "dcaaddd7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Миколаївська область"
+  },
+  {
+    "Ref": "0dae01e5-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b0306f-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Ратнівський р-н",
+    "Area": "dcaad676-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Волинська область"
+  },
+  {
+    "Ref": "0db617a6-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad59d7-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Білгород-Дністровський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0dc86b2a-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced12-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "селище",
+    "Region": "e4aa9b8a-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Жашківський р-н",
+    "Area": "dcaae57c-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Черкаська область"
+  },
+  {
+    "Ref": "0dd69dd2-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b03bd0-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Криничанський р-н",
+    "Area": "dcaad735-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Дніпропетровська область"
+  },
+  {
+    "Ref": "0ddb4779-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad5ded-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Іванівський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0de2d8f7-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad646f-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Любашівський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0de96e49-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad143b-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Радехівський р-н",
+    "Area": "dcaadd3a-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Львівська область"
+  },
+  {
+    "Ref": "0de9dd39-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4af6e10-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Барський р-н",
+    "Area": "dcaad5a7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Вінницька область"
+  },
+  {
+    "Ref": "0ded7b98-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4af974e-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Гайсинський р-н",
+    "Area": "dcaad5a7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Вінницька область"
+  },
+  {
+    "Ref": "0df7a356-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4afc98b-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Калинівський р-н",
+    "Area": "dcaad5a7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Вінницька область"
+  },
+  {
+    "Ref": "0e0b7fce-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4affcfe-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Погребищенський р-н",
+    "Area": "dcaad5a7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Вінницька область"
+  },
+  {
+    "Ref": "0e1fc3d4-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ae199e-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Радивилівський р-н",
+    "Area": "dcaadfa0-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Рівненська область"
+  },
+  {
+    "Ref": "0e317b30-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab1a18-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Баранівський р-н",
+    "Area": "dcaad8fb-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Житомирська область"
+  },
+  {
+    "Ref": "0e542149-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ae0f71-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Березнівський р-н",
+    "Area": "dcaadfa0-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Рівненська область"
+  },
+  {
+    "Ref": "0e75e84f-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aae96a-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Борзнянський р-н",
+    "Area": "dcaae6a8-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Чернігівська область"
+  },
+  {
+    "Ref": "0e92af86-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aa7afd-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Віньковецький р-н",
+    "Area": "dcaae4e5-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Хмельницька область"
+  },
+  {
+    "Ref": "0e9b1f1b-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aaf759-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Носівський р-н",
+    "Area": "dcaae6a8-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Чернігівська область"
+  },
+  {
+    "Ref": "0e9e6344-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aa84d6-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Деражнянський р-н",
+    "Area": "dcaae4e5-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Хмельницька область"
+  },
+  {
+    "Ref": "0ea91ca7-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aa874f-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Кам'янець-Подільський р-н",
+    "Area": "dcaae4e5-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Хмельницька область"
+  },
+  {
+    "Ref": "0e29f168-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамове",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab1def-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Ємільчинський р-н",
+    "Area": "dcaad8fb-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Житомирська область"
+  },
+  {
+    "Ref": "0eb9d14f-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адампіль",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aa948b-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Старосинявський р-н",
+    "Area": "dcaae4e5-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Хмельницька область"
+  },
+  {
+    "Ref": "0dbfd41c-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Адамчуки",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b03422-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Шацький р-н",
+    "Area": "dcaad676-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Волинська область"
+  },
+  {
+    "Ref": "0e5f9cf3-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Аджамка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b0c87e-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Кіровоградський р-н",
+    "Area": "dcaadbf9-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Кіровоградська область"
+  },
+  {
+    "Ref": "0e46f43f-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Азов",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab819e-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Приморський р-н",
+    "Area": "dcaada26-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Запорізька область"
+  },
+  {
+    "Ref": "0e4c5754-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced12-f210-11e3-8c4a-0050568002cf",
+    "Description": "Азов",
+    "SettlementTypeDescription": "селище",
+    "Region": "e4ab826a-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Розівський р-н",
+    "Area": "dcaada26-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Запорізька область"
+  },
+  {
+    "Ref": "0d82a78a-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced12-f210-11e3-8c4a-0050568002cf",
+    "Description": "Азовське",
+    "SettlementTypeDescription": "селище",
+    "Region": "e4ac79f5-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Мангушський",
+    "Area": "dcaad81c-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Донецька область"
+  },
+  {
+    "Ref": "0dc2566d-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Азовське",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab7577-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Бердянський р-н",
+    "Area": "dcaada26-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Запорізька область"
+  },
+  {
+    "Ref": "0dd0fe92-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Азовське",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aa6a49-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Генічеський р-н",
+    "Area": "dcaae44b-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Херсонська область"
+  },
+  {
+    "Ref": "0e5313fe-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Айдар-Миколаївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b13ed4-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Новоайдарський р-н",
+    "Area": "dcaadc91-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Луганська область"
+  },
+  {
+    "Ref": "0dab730b-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Акмечетські Ставки",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ace09a-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Доманівський р-н",
+    "Area": "dcaaddd7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Миколаївська область"
+  },
+  {
+    "Ref": "0e94be44-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Акрешори",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab0cc1-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Косівський р-н",
+    "Area": "dcaadac6-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Івано-Франківська область"
+  },
+  {
+    "Ref": "0e6f734c-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Аксютівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aa4ccc-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Зміївський р-н",
+    "Area": "dcaae3a1-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Харківська область"
+  },
+  {
+    "Ref": "0daa90d7-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Актове",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ace22a-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Вознесенський р-н",
+    "Area": "dcaaddd7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Миколаївська область"
+  },
+  {
+    "Ref": "0dc103e1-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Акулинівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aee979-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Балтський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0e5f1bcb-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Алісівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aee89c-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Дергачівський р-н",
+    "Area": "dcaae3a1-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Харківська область"
+  },
+  {
+    "Ref": "0dc0a6f7-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Алтестове",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad5ad1-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Біляївський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0dd54c5f-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Алтинівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ae5352-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Кролевецький р-н",
+    "Area": "dcaae036-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Сумська область"
+  },
+  {
+    "Ref": "0e76b9c7-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Альошинське",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aaeafb-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Городнянський р-н",
+    "Area": "dcaae6a8-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Чернігівська область"
+  },
+  {
+    "Ref": "0e2c96dd-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced12-f210-11e3-8c4a-0050568002cf",
+    "Description": "Амбари",
+    "SettlementTypeDescription": "селище",
+    "Region": "e4ae4c7f-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Білопільський р-н",
+    "Area": "dcaae036-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Сумська область"
+  },
+  {
+    "Ref": "0de348da-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Амбарів",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad655b-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Миколаївський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0e63d520-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Амбарне",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aee5fe-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Великобурлуцький р-н",
+    "Area": "dcaae3a1-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Харківська область"
+  },
+  {
+    "Ref": "0eb3a793-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Амбуків",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b00865-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Володимир-Волинський р-н",
+    "Area": "dcaad676-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Волинська область"
+  },
+  {
+    "Ref": "0db59f29-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Амури",
+    "SettlementTypeDescription": "село",
+    "Region": "e4abe7d0-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Ананьївський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0e308c7f-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Анадоли",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aadc52-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Хотинський р-н",
+    "Area": "dcaae60e-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Чернівецька область"
+  },
+  {
+    "Ref": "0eb150cc-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Анадоль",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ac4172-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Волноваський р-н",
+    "Area": "dcaad81c-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Донецька область"
+  },
+  {
+    "Ref": "e71414e9-4b33-11e4-ab6d-005056801329",
+    "SettlementType": "563ced10-f210-11e3-8c4a-0050568002cf",
+    "Description": "Ананьїв",
+    "SettlementTypeDescription": "місто",
+    "Region": "e4abe7d0-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Ананьївський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "57d56a22-9d86-11e4-91b8-2f592fe1dcac",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Ананьїв (Перший)",
+    "SettlementTypeDescription": "село",
+    "Region": "e4abe7d0-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Ананьївський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0db96f67-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Анастасівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4acbbfe-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Новобузький р-н",
+    "Area": "dcaaddd7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Миколаївська область"
+  },
+  {
+    "Ref": "0dc398f4-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Анастасівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b03a8f-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Криворізький р-н",
+    "Area": "dcaad735-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Дніпропетровська область"
+  },
+  {
+    "Ref": "0df3d14e-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Анастасівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ae5857-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Роменський р-н",
+    "Area": "dcaae036-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Сумська область"
+  },
+  {
+    "Ref": "0e56ff25-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Анастасівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab32de-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Новоград-Волинський р-н",
+    "Area": "dcaad8fb-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Житомирська область"
+  },
+  {
+    "Ref": "0d9d68b7-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Анатолівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ace553-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Березанський р-н",
+    "Area": "dcaaddd7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Миколаївська область"
+  },
+  {
+    "Ref": "0dc154de-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Анатолівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad58e3-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Березівський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0ddd87d4-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Анатолівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aa6ec1-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Нижньосірогозький р-н",
+    "Area": "dcaae44b-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Херсонська область"
+  },
+  {
+    "Ref": "0e59123c-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Анатолівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4af6b77-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Добровеличківський р-н",
+    "Area": "dcaadbf9-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Кіровоградська область"
+  },
+  {
+    "Ref": "0e1817ac-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Ангелівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ae898b-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Тернопільський р-н",
+    "Area": "dcaae303-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Тернопільська область"
+  },
+  {
+    "Ref": "0e86f5bd-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Ангелівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab0a3e-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Долинський р-н",
+    "Area": "dcaadac6-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Івано-Франківська область"
+  },
+  {
+    "Ref": "0ebd2ec5-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Ангелівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ae8115-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Заліщицький р-н",
+    "Area": "dcaae303-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Тернопільська область"
+  },
+  {
+    "Ref": "0df03db0-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Ангелінівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad67f1-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Роздільнянський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0e27baf1-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андреківське",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aaa191-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Путильський р-н",
+    "Area": "dcaae60e-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Чернівецька область"
+  },
+  {
+    "Ref": "0e20a436-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андренки",
+    "SettlementTypeDescription": "село",
+    "Region": "e4adbcc4-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Диканський р-н",
+    "Area": "dcaadf02-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Полтавська область"
+  },
+  {
+    "Ref": "0ead6062-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андрівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab7577-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Бердянський р-н",
+    "Area": "dcaada26-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Запорізька область"
+  },
+  {
+    "Ref": "0e29f37e-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андрієвичі",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab1def-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Ємільчинський р-н",
+    "Area": "dcaad8fb-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Житомирська область"
+  },
+  {
+    "Ref": "0d9d6ab8-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андрієво-Зорине",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ace553-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Березанський р-н",
+    "Area": "dcaaddd7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Миколаївська область"
+  },
+  {
+    "Ref": "0de34b22-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андрієво-Іванівка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad655b-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Миколаївський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0df03fbe-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андрієво-Іванове",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad67f1-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Роздільнянський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0d928b78-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad1eab-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Буський р-н",
+    "Area": "dcaadd3a-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Львівська область"
+  },
+  {
+    "Ref": "0d94cd88-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced12-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "селище",
+    "Region": "e4ace61f-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Баштанський р-н",
+    "Area": "dcaaddd7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Миколаївська область"
+  },
+  {
+    "Ref": "0d9d6cb5-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ace553-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Березанський р-н",
+    "Area": "dcaaddd7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Миколаївська область"
+  },
+  {
+    "Ref": "0da42911-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aa4e78-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Ізюмський р-н",
+    "Area": "dcaae3a1-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Харківська область"
+  },
+  {
+    "Ref": "0da9fb75-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b139f0-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Сватівський р-н",
+    "Area": "dcaadc91-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Луганська область"
+  },
+  {
+    "Ref": "0db338d2-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4acbec5-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Казанківський р-н",
+    "Area": "dcaaddd7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Миколаївська область"
+  },
+  {
+    "Ref": "0db61a1d-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad59d7-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Білгород-Дністровський р-н",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0db80d32-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab720f-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Ужгородський р-н",
+    "Area": "dcaad993-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Закарпатська область"
+  },
+  {
+    "Ref": "0db916d8-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4acbd17-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Миколаївський р-н",
+    "Area": "dcaaddd7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Миколаївська область"
+  },
+  {
+    "Ref": "0dbad9db-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b03847-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Верхньодніпровський р-н",
+    "Area": "dcaad735-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Дніпропетровська область"
+  },
+  {
+    "Ref": "0dc664ab-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aa6800-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Великоолександрівський р-н",
+    "Area": "dcaae44b-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Херсонська область"
+  },
+  {
+    "Ref": "0dd6a008-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b03bd0-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Криничанський р-н",
+    "Area": "dcaad735-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Дніпропетровська область"
+  },
+  {
+    "Ref": "0ddafe44-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad61ef-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Подільський",
+    "Area": "dcaade6d-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Одеська область"
+  },
+  {
+    "Ref": "0dde9022-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aa769f-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Скадовський р-н",
+    "Area": "dcaae44b-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Херсонська область"
+  },
+  {
+    "Ref": "0ddf242d-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aa7817-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Чаплинський р-н",
+    "Area": "dcaae44b-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Херсонська область"
+  },
+  {
+    "Ref": "0de97095-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ad143b-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Радехівський р-н",
+    "Area": "dcaadd3a-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Львівська область"
+  },
+  {
+    "Ref": "0df1a3bc-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b078a4-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Новомосковський р-н",
+    "Area": "dcaad735-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Дніпропетровська область"
+  },
+  {
+    "Ref": "0df3d36e-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ae5857-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Роменський р-н",
+    "Area": "dcaae036-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Сумська область"
+  },
+  {
+    "Ref": "0dfda26f-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ae5a16-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Сумський р-н",
+    "Area": "dcaae036-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Сумська область"
+  },
+  {
+    "Ref": "0e043310-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ade7d2-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Решетилівський р-н",
+    "Area": "dcaadf02-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Полтавська область"
+  },
+  {
+    "Ref": "0e0dae11-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b07d06-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Покровський р-н",
+    "Area": "dcaad735-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Дніпропетровська область"
+  },
+  {
+    "Ref": "0e1a01c6-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4b004db-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Шаргородський р-н",
+    "Area": "dcaad5a7-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Вінницька область"
+  },
+  {
+    "Ref": "0e20a207-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4adbcc4-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Диканський р-н",
+    "Area": "dcaadf02-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Полтавська область"
+  },
+  {
+    "Ref": "0e2374e4-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab789b-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Вільнянський р-н",
+    "Area": "dcaada26-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Запорізька область"
+  },
+  {
+    "Ref": "0e2862b3-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4abe8a6-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Софіївський р-н",
+    "Area": "dcaad735-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Дніпропетровська область"
+  },
+  {
+    "Ref": "0e2ef5bd-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ac0459-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Царичанський р-н",
+    "Area": "dcaad735-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Дніпропетровська область"
+  },
+  {
+    "Ref": "0e30f0bc-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4aaebc7-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Ічнянський р-н",
+    "Area": "dcaae6a8-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Чернігівська область"
+  },
+  {
+    "Ref": "0e3cc35b-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ade1dc-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Машівський р-н",
+    "Area": "dcaadf02-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Полтавська область"
+  },
+  {
+    "Ref": "0e3d1d87-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ade30f-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Миргородський р-н",
+    "Area": "dcaadf02-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Полтавська область"
+  },
+  {
+    "Ref": "0e3e018f-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ade447-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Новосанжарський р-н",
+    "Area": "dcaadf02-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Полтавська область"
+  },
+  {
+    "Ref": "0e452041-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ade6ea-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Полтавський р-н",
+    "Area": "dcaadf02-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Полтавська область"
+  },
+  {
+    "Ref": "0e4dc13d-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ae0ae7-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Хорольський р-н",
+    "Area": "dcaadf02-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Полтавська область"
+  },
+  {
+    "Ref": "0e534f3c-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab84d6-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Якимівський р-н",
+    "Area": "dcaada26-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Запорізька область"
+  },
+  {
+    "Ref": "0e585afb-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ac7af8-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Слов'янський р-н",
+    "Area": "dcaad81c-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Донецька область"
+  },
+  {
+    "Ref": "0e585d43-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced11-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "селище міського типу",
+    "Region": "e4ac7af8-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Слов'янський р-н",
+    "Area": "dcaad81c-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Донецька область"
+  },
+  {
+    "Ref": "0e591496-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4af6b77-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Добровеличківський р-н",
+    "Area": "dcaadbf9-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Кіровоградська область"
+  },
+  {
+    "Ref": "0e629a77-4b3a-11e4-ab6d-005056801329",
+    "SettlementType": "563ced13-f210-11e3-8c4a-0050568002cf",
+    "Description": "Андріївка",
+    "SettlementTypeDescription": "село",
+    "Region": "e4ab3479-4b33-11e4-ab6d-005056801329",
+    "RegionsDescription": "Олевський р-н",
+    "Area": "dcaad8fb-4b33-11e4-ab6d-005056801329",
+    "AreaDescription": "Житомирська область"
+  }
+]

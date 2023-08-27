@@ -1,0 +1,713 @@
+[
+  {
+    "Ref": "0446498a-7814-4a70-b262-f35c9c51cd85",
+    "Description": "Гофрокартон 3-шаровий",
+    "Length": "1000.0",
+    "Width": "1000.0",
+    "Height": "0.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "0b39fcdc-45e3-11e7-80c8-005056887b8d",
+    "Description": "Конверт поліетиленовий малий  235*250 мм б/н",
+    "Length": "0.0",
+    "Width": "0.0",
+    "Height": "0.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "0b39fd0b-45e3-11e7-80c8-005056887b8d",
+    "Description": "Конверт поліетиленовий середній 250*360 мм",
+    "Length": "0.0",
+    "Width": "0.0",
+    "Height": "0.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "10faca55-fc54-11df-ad22-0024e83b596e",
+    "Description": "Пакування в мішок поліпропіленовий (55*105)",
+    "Length": "100.0",
+    "Width": "450.0",
+    "Height": "0.0",
+    "VolumetricWeight": "10.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "26de1b71-45c7-11e7-80c8-005056887b8d",
+    "Description": "Конверт поліетиленовий малий  235*250 мм",
+    "Length": "0.0",
+    "Width": "0.0",
+    "Height": "0.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "49bb4d91-45e3-11e7-80c8-005056887b8d",
+    "Description": "Конверт поліетиленовий середній 250*360 мм б/н",
+    "Length": "0.0",
+    "Width": "0.0",
+    "Height": "0.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "58121063-45e3-11e7-80c8-005056887b8d",
+    "Description": "Конверт поліетиленовий великий 380*400 мм",
+    "Length": "0.0",
+    "Width": "0.0",
+    "Height": "0.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "6d2b98e8-45be-4221-9778-44a35447747e",
+    "Description": "Піддон для 5-шарового гофрокартону (оренда)",
+    "Length": "0.0",
+    "Width": "0.0",
+    "Height": "0.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "77e176c9-45e3-11e7-80c8-005056887b8d",
+    "Description": "Конверт поліетиленовий великий 380*400 мм б/н",
+    "Length": "0.0",
+    "Width": "0.0",
+    "Height": "0.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "7a0389f2-3959-42ae-a912-e4a04162ec1c",
+    "Description": "Скотч 1 рулон, (48мм) 100 м",
+    "Length": "0.0",
+    "Width": "0.0",
+    "Height": "0.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "a78f1cc9-ae10-11e4-a77a-005056887b8d",
+    "Description": "Пакування в стрейч плівку (Палета)",
+    "Length": "0.0",
+    "Width": "0.0",
+    "Height": "0.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "c503f86c-7193-11e1-8c00-0026b97ed48a",
+    "Description": "Плівка повітряно-пузиркова 1*1м",
+    "Length": "1000.0",
+    "Width": "1000.0",
+    "Height": "0.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "cb73a7e9-7b86-4094-8885-613f2d5a662f",
+    "Description": "Обрешетування дерев'яне",
+    "Length": "0.0",
+    "Width": "0.0",
+    "Height": "0.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "cd00107e-2e73-41eb-9056-85a9931c6223",
+    "Description": "Пакування на поштоматі",
+    "Length": "0.0",
+    "Width": "0.0",
+    "Height": "0.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "da9fec03-9861-4aa9-84c5-bd39f1881fa2",
+    "Description": "Оренда піддону 120х80 для переміщення великої побутової техніки",
+    "Length": "0.0",
+    "Width": "0.0",
+    "Height": "0.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "eb43d9a5-c206-46df-ba8d-3e3947457efc",
+    "Description": "Пінопласт (20 мм)",
+    "Length": "100.0",
+    "Width": "50.0",
+    "Height": "0.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "f578d70b-6818-11e9-898c-005056b24375",
+    "Description": "Гофрокартон 5-шаровий",
+    "Length": "1200.0",
+    "Width": "1000.0",
+    "Height": "0.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "63d9608e-3107-11e5-add9-005056887b8d",
+    "Description": "Конверт з ПБ плівкою С/13 (150х215) мм",
+    "Length": "225.0",
+    "Width": "170.0",
+    "Height": "10.0",
+    "VolumetricWeight": "0.10",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "dc389ddc-3106-11e5-add9-005056887b8d",
+    "Description": "Конверт з ПБ плівкою D/14 (180х265) мм",
+    "Length": "255.0",
+    "Width": "170.0",
+    "Height": "10.0",
+    "VolumetricWeight": "0.11",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "dc389dfe-3106-11e5-add9-005056887b8d",
+    "Description": "Конверт з ПБ плівкою E/15 (220х265) мм",
+    "Length": "275.0",
+    "Width": "240.0",
+    "Height": "10.0",
+    "VolumetricWeight": "0.13",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "8589468f-92f8-4e0a-a00d-4e71ef88c28e",
+    "Description": "Переупаковка в коробку redBOX XS",
+    "Length": "200.0",
+    "Width": "150.0",
+    "Height": "50.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "1499fa48-d26e-11e1-95e4-0026b97ed48a",
+    "Description": "Конверт для документів",
+    "Length": "350.0",
+    "Width": "250.0",
+    "Height": "20.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "18e2cc02-2c89-4ac3-9707-f09122cc37d2",
+    "Description": "Фірмовий п/е пакет б/н 0,5 кг",
+    "Length": "250.0",
+    "Width": "235.0",
+    "Height": "34.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "b3b7005e-dcd5-11e8-ad0d-005056b24375",
+    "Description": "Коробка (0,5 кг) пласка з наповнювачем",
+    "Length": "240.0",
+    "Width": "170.0",
+    "Height": "49.0",
+    "VolumetricWeight": "0.50",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "b3b70094-dcd5-11e8-ad0d-005056b24375",
+    "Description": "Коробка (0,5кг) стандартна з наповнювачем",
+    "Length": "170.0",
+    "Width": "120.0",
+    "Height": "98.0",
+    "VolumetricWeight": "0.50",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "f6f72e4b-5daf-11e3-b441-0050568002cf",
+    "Description": "Коробка (0,5 кг) пласка",
+    "Length": "240.0",
+    "Width": "170.0",
+    "Height": "49.0",
+    "VolumetricWeight": "0.50",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "f6f72e4c-5daf-11e3-b441-0050568002cf",
+    "Description": "Коробка (0,5 кг) стандартна",
+    "Length": "170.0",
+    "Width": "120.0",
+    "Height": "98.0",
+    "VolumetricWeight": "0.50",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "de1836f7-d77a-47ac-8dee-0a64433b84e4",
+    "Description": "Коробка для поштомату (мала)",
+    "Length": "210.0",
+    "Width": "110.0",
+    "Height": "110.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "3fd44e19-6221-4ca9-bbb3-6b473e3dcfbe",
+    "Description": "Фірмовий п/е пакет б/н 1 кг",
+    "Length": "350.0",
+    "Width": "250.0",
+    "Height": "45.0",
+    "VolumetricWeight": "1.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "085e2da0-dcd6-11e8-ad0d-005056b24375",
+    "Description": "Коробка (1 кг) стандартна з наповнювачем",
+    "Length": "240.0",
+    "Width": "170.0",
+    "Height": "98.0",
+    "VolumetricWeight": "1.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "80049ea8-2ab0-11e3-b441-0050568002cf",
+    "Description": "Коробка (1 кг) стандартна",
+    "Length": "240.0",
+    "Width": "170.0",
+    "Height": "98.0",
+    "VolumetricWeight": "1.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "80049ea9-2ab0-11e3-b441-0050568002cf",
+    "Description": "Коробка (1 кг) пласка",
+    "Length": "340.0",
+    "Width": "240.0",
+    "Height": "49.0",
+    "VolumetricWeight": "1.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "d3bd1af2-dcd5-11e8-ad0d-005056b24375",
+    "Description": "Коробка (1 кг) пласка з наповнювачем",
+    "Length": "340.0",
+    "Width": "240.0",
+    "Height": "49.0",
+    "VolumetricWeight": "1.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "c960a760-03b2-4a2a-82a8-953126952c97",
+    "Description": "Переупаковка в коробку redBOX S",
+    "Length": "300.0",
+    "Width": "200.0",
+    "Height": "100.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "533768e6-e818-4da7-a18f-e347bd11da85",
+    "Description": "Пакет для одягу 2кг",
+    "Length": "390.0",
+    "Width": "290.0",
+    "Height": "70.0",
+    "VolumetricWeight": "2.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "6f017598-51d6-4879-8659-6c7b71cc7484",
+    "Description": "Коробка (2 кг) квадратна",
+    "Length": "240.0",
+    "Width": "200.0",
+    "Height": "166.0",
+    "VolumetricWeight": "2.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "d01528d8-e0e2-498b-bef7-ab234ad6dd90",
+    "Description": "Коробка (2 кг) квадратна з наповнювачем",
+    "Length": "200.0",
+    "Width": "240.0",
+    "Height": "166.0",
+    "VolumetricWeight": "2.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "ab0cd73c-da19-11e1-aa18-d4ae527baec9",
+    "Description": "Коробка (2 кг)",
+    "Length": "340.0",
+    "Width": "240.0",
+    "Height": "98.0",
+    "VolumetricWeight": "2.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "c20a0982-dcd6-11e8-ad0d-005056b24375",
+    "Description": "Коробка (2 кг) з наповнювачем",
+    "Length": "340.0",
+    "Width": "240.0",
+    "Height": "98.0",
+    "VolumetricWeight": "2.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "c5d49e74-4ea1-11e2-889f-001631fa0467",
+    "Description": "Пакування в стрейч плівку (0.1-2 кг)",
+    "Length": "200.0",
+    "Width": "200.0",
+    "Height": "200.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "d056fa35-944b-40e5-9532-4e1702677fcd",
+    "Description": "Коробка для поштомату (середня)",
+    "Length": "330.0",
+    "Width": "230.0",
+    "Height": "110.0",
+    "VolumetricWeight": "2.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "739eac98-002b-4e19-9069-9e396b6ba99a",
+    "Description": "Тубус 60 Прямокутний",
+    "Length": "600.0",
+    "Width": "160.0",
+    "Height": "120.0",
+    "VolumetricWeight": "3.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "f77ac38c-adb9-4391-8c0a-dfaf74a8095a",
+    "Description": "Тубус 60 прямокутний з наповнювачем",
+    "Length": "600.0",
+    "Width": "160.0",
+    "Height": "120.0",
+    "VolumetricWeight": "3.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "ce5156c6-cc81-11e4-a77a-005056887b8d",
+    "Description": "Тубус 60 cм",
+    "Length": "600.0",
+    "Width": "150.0",
+    "Height": "130.0",
+    "VolumetricWeight": "3.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "04a73c1c-dcd7-11e8-ad0d-005056b24375",
+    "Description": "Коробка (3 кг) з наповнювачем",
+    "Length": "240.0",
+    "Width": "240.0",
+    "Height": "208.0",
+    "VolumetricWeight": "3.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "f6f72e4d-5daf-11e3-b441-0050568002cf",
+    "Description": "Коробка (3 кг)",
+    "Length": "240.0",
+    "Width": "240.0",
+    "Height": "208.0",
+    "VolumetricWeight": "3.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "0e7db175-7a70-4e1b-ba56-ca20b9a48ac4",
+    "Description": "Коробка (3 кг) пласка з наповнювачем",
+    "Length": "240.0",
+    "Width": "340.0",
+    "Height": "147.0",
+    "VolumetricWeight": "3.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "6acae69a-e177-4732-9935-acecf090b158",
+    "Description": "Коробка (3 кг) пласка",
+    "Length": "340.0",
+    "Width": "240.0",
+    "Height": "147.0",
+    "VolumetricWeight": "3.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "988f6991-1bd2-11e4-acce-0050568002cf",
+    "Description": "Коробка (4кг) для ноутбука",
+    "Length": "535.0",
+    "Width": "380.0",
+    "Height": "75.0",
+    "VolumetricWeight": "4.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "d25b8638-24f0-4d48-9ee2-d2aee9988de1",
+    "Description": "Великий пакет для одягу (4 кг)",
+    "Length": "460.0",
+    "Width": "340.0",
+    "Height": "100.0",
+    "VolumetricWeight": "4.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "68895770-8126-4440-bd5f-c6fd8d0af95d",
+    "Description": "Коробка для поштомату (велика)",
+    "Length": "330.0",
+    "Width": "230.0",
+    "Height": "210.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "9b908e63-7658-4a35-9b10-edfcec7ce99d",
+    "Description": "Переупаковка в коробку redBOX M",
+    "Length": "300.0",
+    "Width": "300.0",
+    "Height": "200.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "248af044-12ae-412f-ae4a-11d25270d9b4",
+    "Description": "Тубус 120 прямокутний з наповнювачем",
+    "Length": "1200.0",
+    "Width": "140.0",
+    "Height": "110.0",
+    "VolumetricWeight": "5.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "c7ab7a78-47f9-46e5-850d-dbf376c2605c",
+    "Description": "Тубус 120 Прямокутний",
+    "Length": "1200.0",
+    "Width": "140.0",
+    "Height": "110.0",
+    "VolumetricWeight": "5.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "10faca52-fc54-11df-ad22-0024e83b596e",
+    "Description": "Коробка (5 кг)",
+    "Length": "400.0",
+    "Width": "240.0",
+    "Height": "208.0",
+    "VolumetricWeight": "5.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "3ab6e3b4-dcd7-11e8-ad0d-005056b24375",
+    "Description": "Коробка (5 кг) з наповнювачем",
+    "Length": "400.0",
+    "Width": "240.0",
+    "Height": "208.0",
+    "VolumetricWeight": "5.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "01f20c82-cc80-11e4-a77a-005056887b8d",
+    "Description": "Тубус 110 cм",
+    "Length": "1100.0",
+    "Width": "150.0",
+    "Height": "130.0",
+    "VolumetricWeight": "5.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "ce5156a3-cc81-11e4-a77a-005056887b8d",
+    "Description": "Тубус 150 cм",
+    "Length": "1500.0",
+    "Width": "150.0",
+    "Height": "130.0",
+    "VolumetricWeight": "8.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "e22501f4-d1bd-4908-ab4a-dc355cc75d84",
+    "Description": "Переупаковка в коробку redBOX L",
+    "Length": "400.0",
+    "Width": "300.0",
+    "Height": "300.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "391b5966-4a3d-4b19-96e2-c40dabce1def",
+    "Description": "Тубус 80 прямокутний",
+    "Length": "800.0",
+    "Width": "240.0",
+    "Height": "200.0",
+    "VolumetricWeight": "10.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "86d0a943-aeff-48e3-a9a1-22c8d2210b29",
+    "Description": "Тубус 80 прямокутний з наповнювачем",
+    "Length": "800.0",
+    "Width": "240.0",
+    "Height": "200.0",
+    "VolumetricWeight": "10.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "2200f200-dcd6-11e8-ad0d-005056b24375",
+    "Description": "Коробка (10 кг) з наповнювачем",
+    "Length": "400.0",
+    "Width": "350.0",
+    "Height": "285.0",
+    "VolumetricWeight": "10.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "63e53f67-5098-11e0-ad70-fac2898a22b9",
+    "Description": "Коробка (10 кг)",
+    "Length": "400.0",
+    "Width": "350.0",
+    "Height": "285.0",
+    "VolumetricWeight": "10.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "4847b0a3-84e0-4842-bf7f-2450006128b9",
+    "Description": "Переупаковка в коробку redBOX XL",
+    "Length": "450.0",
+    "Width": "400.0",
+    "Height": "300.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "36c461c8-dcd6-11e8-ad0d-005056b24375",
+    "Description": "Коробка (15 кг) з наповнювачем",
+    "Length": "600.0",
+    "Width": "350.0",
+    "Height": "285.0",
+    "VolumetricWeight": "15.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "ab0cd73d-da19-11e1-aa18-d4ae527baec9",
+    "Description": "Коробка (15 кг)",
+    "Length": "600.0",
+    "Width": "350.0",
+    "Height": "285.0",
+    "VolumetricWeight": "15.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "c20a09b8-dcd6-11e8-ad0d-005056b24375",
+    "Description": "Коробка (20 кг) з наповнювачем",
+    "Length": "470.0",
+    "Width": "400.0",
+    "Height": "425.0",
+    "VolumetricWeight": "20.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "f6f72e4e-5daf-11e3-b441-0050568002cf",
+    "Description": "Коробка (20 кг)",
+    "Length": "470.0",
+    "Width": "400.0",
+    "Height": "425.0",
+    "VolumetricWeight": "20.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "eb8c268e-dcd6-11e8-ad0d-005056b24375",
+    "Description": "Коробка (30 кг) з наповнювачем",
+    "Length": "700.0",
+    "Width": "400.0",
+    "Height": "420.0",
+    "VolumetricWeight": "30.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "f6f72e4f-5daf-11e3-b441-0050568002cf",
+    "Description": "Коробка (30 кг)",
+    "Length": "700.0",
+    "Width": "400.0",
+    "Height": "420.0",
+    "VolumetricWeight": "30.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "29e52a2e-4184-4f71-8b45-e7797d4dac13",
+    "Description": "Коробка (30 кг ) подовжена з наповнювачем",
+    "Length": "1000.0",
+    "Width": "400.0",
+    "Height": "300.0",
+    "VolumetricWeight": "30.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "7da7f48d-eb74-4cb4-9575-3c10ca116657",
+    "Description": "Коробка (30кг) подовжена",
+    "Length": "1000.0",
+    "Width": "400.0",
+    "Height": "300.0",
+    "VolumetricWeight": "30.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "c5d49e75-4ea1-11e2-889f-001631fa0467",
+    "Description": "Пакування в стрейч плівку (2-30 кг)",
+    "Length": "500.0",
+    "Width": "500.0",
+    "Height": "480.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "1c09f1d8-dcd7-11e8-ad0d-005056b24375",
+    "Description": "Коробка (40 кг) з наповнювачем",
+    "Length": "700.0",
+    "Width": "510.0",
+    "Height": "448.0",
+    "VolumetricWeight": "40.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "ab0cd73e-da19-11e1-aa18-d4ae527baec9",
+    "Description": "Коробка (40 кг)",
+    "Length": "700.0",
+    "Width": "510.0",
+    "Height": "448.0",
+    "VolumetricWeight": "40.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "c5d49e76-4ea1-11e2-889f-001631fa0467",
+    "Description": "Пакування в стрейч плівку (30-100 кг)",
+    "Length": "750.0",
+    "Width": "750.0",
+    "Height": "710.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "c7e2e1a1-503f-11e2-912b-d4ae52ab9fab",
+    "Description": "Пакування в стрейч плівку (більше 100 кг)",
+    "Length": "750.0",
+    "Width": "750.0",
+    "Height": "720.0",
+    "VolumetricWeight": "0.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "8b7ef12d-8c1e-4ca8-b05f-ee08a6ba04a2",
+    "Description": "Flat-бокс (малий)",
+    "Length": "1000.0",
+    "Width": "400.0",
+    "Height": "1400.0",
+    "VolumetricWeight": "70.00",
+    "TypeOfPacking": ""
+  },
+  {
+    "Ref": "b91721b1-7aa7-46cd-ae74-1df64ddb6ac0",
+    "Description": "Flat-бокс (великий)",
+    "Length": "1800.0",
+    "Width": "400.0",
+    "Height": "1500.0",
+    "VolumetricWeight": "136.00",
+    "TypeOfPacking": ""
+  }
+]

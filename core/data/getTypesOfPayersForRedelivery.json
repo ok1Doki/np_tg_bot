@@ -1,0 +1,14 @@
+[
+  {
+    "Description": "Відправник",
+    "Ref": "Sender"
+  },
+  {
+    "Description": "Одержувач",
+    "Ref": "Recipient"
+  },
+  {
+    "Description": "Третя особа",
+    "Ref": "ThirdPerson"
+  }
+]

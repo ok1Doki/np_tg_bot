@@ -1,0 +1,22 @@
+[
+  {
+    "Description": "Посилка",
+    "Ref": "Parcel"
+  },
+  {
+    "Description": "Вантаж",
+    "Ref": "Cargo"
+  },
+  {
+    "Description": "Документи",
+    "Ref": "Documents"
+  },
+  {
+    "Description": "Шини-диски",
+    "Ref": "TiresWheels"
+  },
+  {
+    "Description": "Палети",
+    "Ref": "Pallet"
+  }
+]
