@@ -1,6 +1,10 @@
 import chromadb
+from chromadb import Settings
 
-chroma_client = chromadb.Client()
+from core.config import chromadb_uri, chromadb_port
+
+chroma_client = chromadb.HttpClient(host=chromadb_uri, port=chromadb_port,
+                                    settings=Settings(allow_reset=True, anonymized_telemetry=False))
 
 
 def demo():
