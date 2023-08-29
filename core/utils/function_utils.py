@@ -184,7 +184,9 @@ f3.properties.add(property("phone", PropertyType.string, "Номер телеф�
                         #  recipient,
                         #  recipient_address,
                         #  contact_recipient,
-                        #  recipients_phone) -> Response:
+                        #  recipients_phone
+                        #  service_type='WarehouseWarehouse'  # not adding to properties atm, using default
+                        # ) -> Response:
 f4 = function(fn=express_waybill.create_express_waybill, 
               trigger_fn=trigger_fn, 
               name="create_express_waybill", 
@@ -203,14 +205,18 @@ f4.properties.add(property("seats_amount", PropertyType.integer, "Кількіс
 f4.properties.add(property("description", PropertyType.string, "Опис вантажу"))
 f4.properties.add(property("cost", PropertyType.integer, "Оціночна вартість вантажу (ціле число)"))
 f4.properties.add(property("city_sender", PropertyType.string, "Населений пункт відправника"))
-f4.properties.add(property("sender", PropertyType.string, "номер телефону відправника"))  # phone number?
-f4.properties.add(property("sender_address", PropertyType.string, "Адреса відправника"))
-f4.properties.add(property("contact_sender", PropertyType.string, "Контактна особа відправника"))  # ?
+f4.properties.add(property("sender", PropertyType.string, 
+                           "ПІБ(прізвище, ім’я, по батькові) відправника"))  # ref/id ?
+f4.properties.add(property("sender_address", PropertyType.string, "Адреса відправника \
+                           (номер/адреса відділення звідки відправляти)"))  # we will use Ref of selected warehouse
+# f4.properties.add(property("contact_sender", PropertyType.string, "Контактна особа відправника"))  # ?
 f4.properties.add(property("senders_phone", PropertyType.string, "Номер телефону відправника"))
 f4.properties.add(property("city_recipient", PropertyType.string, "Населений пункт отримувача"))
-f4.properties.add(property("recipient", PropertyType.string, "номер телефону отримувача"))  # phone number?
-f4.properties.add(property("recipient_address", PropertyType.string, "Адреса отримувача"))
-f4.properties.add(property("contact_recipient", PropertyType.string, "Контактна особа отримувача"))  # ?
+f4.properties.add(property("recipient", PropertyType.string, 
+                           "ПІБ(прізвище, ім’я, по батькові) отримувача"))  # ref/id ?
+f4.properties.add(property("recipient_address", PropertyType.string, "Адреса отримувача \
+                           (номер/адреса відділення куди доставляти)"))  # we will use Ref of selected warehouse
+# f4.properties.add(property("contact_recipient", PropertyType.string, "Контактна особа отримувача"))  # ?
 f4.properties.add(property("recipients_phone", PropertyType.string, "номер телефону отримувача"))
 
 fns_collection[f1.name] = f1
