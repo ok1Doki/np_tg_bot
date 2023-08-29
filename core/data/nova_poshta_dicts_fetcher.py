@@ -3,7 +3,7 @@ import time
 
 import requests
 
-from core.config import config
+import core.config as config
 
 MAX_RETRIES = 10
 RETRY_DELAY = 20

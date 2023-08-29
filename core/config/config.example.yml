@@ -1,13 +1,31 @@
-telegram_token: ""
-
-openai_api_key: ""
+#--------- OPENAPI CONFIG ----------#
+openai_api_key: "" # REQUIRED
 openai_api_base: null  # leave null to use default api base or you can put your own base url here
+openai_model: "gpt-3.5-turbo"  # change to 16k later, this is cheaper for dev
 
-novaposhta_api_key: ""
+
+#------- NOVA POSHTA CONFIG --------#
+novaposhta_api_key: "" # REQUIRED
 novaposhta_api_url: "https://api.novaposhta.ua/v2.0/json/"
 
-allowed_telegram_usernames: []  # if empty, the bot is available to anyone. pass a username string to allow it and/or user ids as positive integers and/or channel ids as negative integers
+
+#------- TELEGRAM BOT CONFIG -------#
+telegram_token: "" # REQUIRED
+allowed_telegram_usernames: [ ]  # if empty, the bot is available to anyone. pass a username string to allow it and/or user ids as positive integers and/or channel ids as negative integers
 new_dialog_timeout: 600  # new dialog starts after timeout (in seconds)
 return_n_generated_images: 1
 n_chat_modes_per_page: 5
 enable_message_streaming: false # if set, messages will be shown to user word-by-word
+
+
+#--------- MONGO DB CONFIG ----------#
+mongodb_path: ./mongodb
+mongodb_port: 27017
+mongo_express_port: 8081
+mongo_express_username: username
+mongo_express_password: password
+
+
+#--------- CHROMA DB CONFIG ---------#
+chromadb_uri: localhost
+chromadb_port: 8009

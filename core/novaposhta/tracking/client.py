@@ -1,6 +1,6 @@
 import httpx
 
-from core.config import config
+import core.config as config
 from core.novaposhta.tracking.request import DocumentInfo, TrackingRequestProperties
 from core.novaposhta.util.base_request import Request
 from core.novaposhta.util.base_response import Response

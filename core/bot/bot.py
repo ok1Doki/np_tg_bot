@@ -9,7 +9,6 @@ from pathlib import Path
 
 import openai
 import pydub
-import telegram
 from google.cloud import texttospeech as tts
 from telegram import (
     Update,
@@ -18,6 +17,7 @@ from telegram import (
     InlineKeyboardMarkup,
     BotCommand
 )
+from telegram.error import BadRequest
 from telegram.constants import ParseMode
 from telegram.ext import (
     Application,
@@ -30,7 +30,7 @@ from telegram.ext import (
 )
 
 import core.utils.openai_utils as openai_utils
-import core.config.config as config
+import core.config as config
 from core.audio_handling.audio_transcription_service import convert_audio_to_text
 from core.bot.database import Database
 
@@ -235,7 +235,7 @@ async def message_handle(update: Update, context: CallbackContext, message=None,
 
                 try:
                     await context.bot.edit_message_text(answer, chat_id=placeholder_message.chat_id, message_id=placeholder_message.message_id, parse_mode=parse_mode)
-                except telegram.error.BadRequest as e:
+                except BadRequest as e:
                     if str(e).startswith("Message is not modified"):
                         continue
                     else:
@@ -482,7 +482,7 @@ async def error_handle(update: Update, context: CallbackContext) -> None:
         for message_chunk in split_text_into_chunks(message, 4096):
             try:
                 await context.bot.send_message(update.effective_chat.id, message_chunk, parse_mode=ParseMode.HTML)
-            except telegram.error.BadRequest:
+            except BadRequest:
                 # answer has invalid characters, so we send it without parse_mode
                 await context.bot.send_message(update.effective_chat.id, message_chunk)
     except:

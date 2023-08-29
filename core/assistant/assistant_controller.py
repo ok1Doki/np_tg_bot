@@ -5,10 +5,16 @@ from fastapi import APIRouter, UploadFile, WebSocket, WebSocketDisconnect
 from fastapi.responses import FileResponse
 
 from core.assistant.assistant_service import handle_json_from_user, handle_audio_from_user
+from core.utils.chroma_utils import demo
 
 controller = APIRouter(prefix='/voice-assistant')
 
 connected_clients = {}
+
+
+@controller.post('/test', status_code=200)
+async def test():
+    return demo()
 
 
 @controller.post('/audio-message', status_code=200)

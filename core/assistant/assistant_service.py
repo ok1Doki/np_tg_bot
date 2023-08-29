@@ -1,6 +1,6 @@
 from datetime import datetime
 
-import core.config.config as config
+import core.config as config
 import core.utils.openai_utils as openai_utils
 from core.audio_handling.audio_generation_service import convert_text_to_audio
 from core.audio_handling.audio_transcription_service import convert_audio_to_text

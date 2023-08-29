@@ -2,7 +2,7 @@ from datetime import datetime
 
 import httpx
 
-from core.config import config
+import core.config as config
 from core.novaposhta.delivery_time.request import DocumentDeliveryDateRequestProperties
 from core.novaposhta.util.base_request import Request
 

@@ -2,7 +2,7 @@ from datetime import datetime
 
 import httpx
 
-from core.config import config
+import core.config as config
 from core.novaposhta.express_waybill.request import CreateExpressWaybillRequestProperties
 from core.novaposhta.util.base_request import Request
 from core.novaposhta.util.base_response import Response

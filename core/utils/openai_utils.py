@@ -2,7 +2,7 @@ import openai
 import tiktoken
 import json
 
-from core.config import config
+import core.config as config
 from core.utils.function_utils import functions, function, property, PropertyType
 from core.utils.function_utils import fns_collection
 

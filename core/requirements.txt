@@ -8,6 +8,8 @@ pydub==0.25.1
 google-cloud==0.34.0
 google-cloud-texttospeech==2.14.1
 google-auth==2.5.0
-fastapi==0.95.1
+fastapi==0.99.1
 uvicorn[standard]==0.22.0
 python-multipart==0.0.6
+chromadb==0.4.8
+pydevd-pycharm

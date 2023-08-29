@@ -4,7 +4,7 @@ import pymongo
 import uuid
 from datetime import datetime
 
-from core.config.config import mongodb_uri
+from core.config import mongodb_uri
 
 
 class Database:
