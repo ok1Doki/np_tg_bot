@@ -42,7 +42,7 @@ class ChatGPT:
         assert model in {"text-davinci-003", "gpt-3.5-turbo-16k", "gpt-3.5-turbo", "gpt-4"}, f"Unknown model: {model}"
         self.model = model
 
-    async def send_message(self, message, dialog_messages=[], chat_mode="assistant"):
+    async def send_message(self, message, session_id, dialog_messages=[], chat_mode="assistant", trigger_fn=None):
         n_dialog_messages_before = len(dialog_messages)
         answer = None
         fn_call_res = None
@@ -58,6 +58,8 @@ class ChatGPT:
                     answer = r.choices[0].message["content"]
                     if "function_call" in r.choices[0].message:
                         fn_name = r.choices[0].message["function_call"]["name"]
+
+                        # if args is None:  ??
                         fns_collection[fn_name].trigger_fn()
                         # here we got function suggestion without params.
                         # use trigger_fn to trigger ui flow here to get params from user.
@@ -106,7 +108,7 @@ class ChatGPT:
                     try:
                         fn_args = json.loads(r.choices[0].message["function_call"]["arguments"])
                         if fn_name in fns_collection:
-                            fn_call_res = fns_collection[fn_name].fn(**fn_args)  # function call
+                            fn_call_res = await fns_collection[fn_name].fn(**fn_args)  # function call
                             # fn_call_res = str(r.choices[0].message["function_call"])  # use this for testing
                     except json.decoder.JSONDecodeError as e:
                         print("Error decoding json:", r.choices[0].message["function_call"]["arguments"])

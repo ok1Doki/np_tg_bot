@@ -12,7 +12,7 @@ import core.config as config
 # chroma's OpenAIEmbeddingFunction limits requests to 3 per min, 
 # langchain's OpenAIEmbeddings handles retries.
 
-persist_directory = "chroma"
+persist_directory = "./core/utils/chroma"
 client = chromadb.PersistentClient(path=persist_directory)
 embeddings = OpenAIEmbeddings(openai_api_key=config.openai_api_key)
 test_collection_name = "collection_name"
@@ -72,29 +72,6 @@ def get_collection(collection_name):
     return coll.get(include=["documents"])
 
 
-def demo():
-    coll = client.create_collection(name=test_collection_name,
-                                           metadata={"hnsw:space": "cosine"})
-    # Add docs to the collection. Can also update and delete. Row-based API coming soon!
-    coll.add(
-        documents=["This is document1", "This is document2"],
-        # we handle tokenization, embedding, and indexing automatically. You can skip that and add your own embeddings as well
-        metadatas=[{"source": "notion"}, {"source": "google-docs"}],  # filter on these!
-        ids=["doc1", "doc2"],  # unique for each doc
-    )
-
-    # Query/search 2 most similar results. You can also .get by id
-    results = coll.query(
-        query_texts=["This is a query document"],
-        n_results=2
-        # where={"metadata_field": "is_equal_to_this"}, # optional filter
-        # where_document={"$contains":"search_string"}  # optional filter
-    )
-
-    return results
-
-
-# print(demo())
-print(query_collection(collection_name=cities_collection_name, query="антонівка"))
+# print(query_collection(collection_name=cities_collection_name, query="антонівка"))
 # print(get_collection(cities_collection_name))
 # print(create_embedded_collection(cities_collection_name, "getCities.json"))

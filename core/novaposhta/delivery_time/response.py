@@ -1,7 +1,7 @@
-from core.novaposhta.util.base_response import ResponseObject
+from pydantic import BaseModel
 
 
-class DocumentDeliveryDateData(ResponseObject):
+class DeliveryDate(BaseModel):
     date: str
     timezone_type: str
     timezone: str
