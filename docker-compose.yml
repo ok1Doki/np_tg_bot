@@ -35,9 +35,9 @@ services:
       context: core
       dockerfile: Dockerfile
     volumes:
-      - "~\\Downloads\\np-tg-tts-1fa2a1dc71f6.json:/secrets/key.json"
+      - /Users/okidoki/Downloads/np-tg-tts-1fa2a1dc71f6.json:/secrets/google-key.json
     environment:
-      - GOOGLE_APPLICATION_CREDENTIALS=/secrets/key.json
+      - GOOGLE_APPLICATION_CREDENTIALS=/secrets/google-key.json
     depends_on:
       - mongo
       - chroma
