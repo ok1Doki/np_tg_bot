@@ -4,6 +4,7 @@ from chromadb.api.types import QueryResult
 import json
 import re
 from langchain.embeddings import OpenAIEmbeddings
+import time
 import core.config as config
 
 # chroma_client = chromadb.HttpClient(host=config.chromadb_uri, port=config.chromadb_port,
@@ -12,7 +13,8 @@ import core.config as config
 # chroma's OpenAIEmbeddingFunction limits requests to 3 per min, 
 # langchain's OpenAIEmbeddings handles retries.
 
-persist_directory = "chroma"  # local dev path for "script-running"
+persist_directory = "chroma_01"  # local dev path for "script-running"
+# persist_directory = "chroma_test"  # local test path for "script-running"
 # persist_directory = "./core/utils/chroma"  # path used in docker
 client = chromadb.PersistentClient(path=persist_directory)
 embeddings = OpenAIEmbeddings(openai_api_key=config.openai_api_key)
@@ -36,17 +38,33 @@ def create_embedded_collection(collection_name, preprocess_fn):
     # to_be_embedded_list = to_be_embedded_list[:110]  # demo, first letter 'A' (for cities)
     print(len(to_be_embedded_list))
     # print(to_be_embedded_list[:3])
-    embeddings_list = embeddings.embed_documents(to_be_embedded_list)
+
+    embeddings_list = []
+    for i in range(0, len(to_be_embedded_list), 5000):
+        embeddings_list += embeddings.embed_documents(to_be_embedded_list[i:i+5000])
+        time.sleep(60)  # can lower to 20 mb, and up 5k a bit idk
+        
     print(len(embeddings_list[0]))
     print(len(embeddings_list))
 
-    for i in range(len(to_be_embedded_list)):
-        coll.add(
-            ids=data[i]['Ref'],
-            embeddings=embeddings_list[i],
-            documents=data[i]['Description'],
-            metadatas=preprocess_warehouses_metadata(data[i])
-        )
+    if collection_name == cities_collection_name:
+        for i in range(len(to_be_embedded_list)):
+            coll.add(
+                ids=data[i]['Ref'],
+                embeddings=embeddings_list[i],
+                documents=data[i]['Description'],
+                metadatas=data[i]
+            )
+    if collection_name == warehouses_collection_name:
+        for i in range(len(to_be_embedded_list)):
+            coll.add(
+                ids=data[i]['Ref'],
+                embeddings=embeddings_list[i],  # preprocess_warehouses_description()
+                # documents = preprocessed descriptions, use metadata for ui
+                # mb (Description + ", " + CityDescription) for UI
+                documents=to_be_embedded_list[i],
+                metadatas=preprocess_warehouses_metadata(data[i])
+            )
     print(len(coll.get(include=["documents"])['ids']))
 
 
@@ -88,7 +106,7 @@ def test_preprocess_warehouses_description():
 
 # used for warehouses querying
 def find_alphanumeric_substrings(input_string):
-    pattern = r'\b(?:\d+/[а-яА-ЯіІїЇєЄҐґ\d]+|\d+/\d+|\d+[а-яА-ЯіІїЇєЄҐґ]|[\d]+(?!\d)|[а-яА-ЯіІїЇєЄҐґ]+-\d+)\b'
+    pattern = r'\b(?:\d+/[а-яА-ЯіІїЇєЄҐґ\d]+|\d+/\d+|\d+[а-яА-ЯіІїЇєЄҐґ]|[\d]+(?!\d)|[а-яА-ЯіІїЇєЄҐґ]+-\d+|\d+[а-яА-ЯіІїЇєЄҐґ]\d+)\b'
     substrings_found = re.findall(pattern, input_string, re.IGNORECASE | re.UNICODE)
 
     return substrings_found
@@ -96,12 +114,12 @@ def find_alphanumeric_substrings(input_string):
 
 def test_find_alphanumeric_substrings():
     input_string = "1Текст з2 б1 т-ц Тіпіль-1, 1/3к під'їздом українським цифра 123 144/2, 14б, 3.14, \
-    14/22, чоп, тополь-13, and 144,1  1/3ю The values are 144/2бб, 22/3к, 22/к3, тєпіль-1, and 144."
+    14/22, чоп, тополь-13, and 144,1  1/3ю The values are 144/2бб, 22/3к, 22/к3, тєпіль-1, and 144. 3к1"
     substrings = find_alphanumeric_substrings(input_string)
     print("input = " + input_string)
     print("numbers:" + str(substrings))
     # expected - ['Тіпіль-1', '1/3к', '123', '144/2', '14б', '3', '14', '14/22', 'тополь-13', '144', '1', 
-    # '1/3ю', '144/2бб', '22/3к', '22/к3', 'тєпіль-1', '144']
+    # '1/3ю', '144/2бб', '22/3к', '22/к3', 'тєпіль-1', '144', '3к1']
 
 
 # used for warehouses querying
@@ -115,7 +133,7 @@ def find_ukrainian_words(input_string):
 
 def test_find_ukrainian_words():
     input_string = "1Текст з2 б1 т-ц Тіпіль-1, 1/3к під'їздом українським цифра 123 144/2, 14б, 3.14, \
-    14/22, чоп, тополь-13, and 144,1  1/3ю The values are 144/2бб, 22/3к, 22/к3, тєпіль-1, and 144."
+    14/22, чоп, тополь-13, and 144,1  1/3ю The values are 144/2бб, 22/3к, 22/к3, тєпіль-1, and 144. 3к1"
     result = find_ukrainian_words(input_string)
     print("words  :" + str(result))
     # expected - ['т-ц', 'Тіпіль', "під'їздом", 'українським', 'цифра', 'чоп', 'тополь', 'тєпіль']
@@ -150,26 +168,32 @@ def query_cities_collection(query: str, n_results=20) -> QueryResult:
     return results
 
 
-def query_warehouses_collection(query: str, n_results=20) -> QueryResult:
+# mb use (Description + ", " + CityDescription) for UI
+def query_warehouses_collection(query: str, cityRef=None, n_results=20) -> QueryResult:
+    assert query is not None and len(query) > 0, "query must be non-empty string"
     coll = client.get_collection(name=warehouses_collection_name)
-    query_embedding = embeddings.embed_documents([query.lower()])
-    results = QueryResult()
+    query_lowercase = query.lower()
+    query_embedding = embeddings.embed_documents([query_lowercase])
+    
+    metadata_filter = {}
+    if cityRef:
+        metadata_filter["CityRef"] = cityRef
 
     # attempt to find specific branch/postomat via '№123' or just first number in query
-    numero_number_or_first_number = find_numero_number_or_first_number(query)
+    numero_result = None
+    numero_number_or_first_number = find_numero_number_or_first_number(query_lowercase)
     if numero_number_or_first_number:
-        results.update(
-            coll.query(
-                query_embeddings=query_embedding,
-                n_results=1,
-                include=query_response_items,
-                # include=["documents", "distances", "metadatas"]  # with metadata
-                where={"Number": numero_number_or_first_number},
-            )
+        metadata_filter["Number"] = numero_number_or_first_number
+        numero_result = coll.query(
+            query_embeddings=query_embedding,
+            n_results=1,
+            include=query_response_items,
+            where=metadata_filter,
         )
+        metadata_filter.pop("Number")
 
-    alphanumeric_substrings = find_alphanumeric_substrings(query)
-    ukrainian_words = find_ukrainian_words(query)
+    alphanumeric_substrings = find_alphanumeric_substrings(query_lowercase)
+    ukrainian_words = find_ukrainian_words(query_lowercase)
     # and:[contains num, contains another num, or:[word1, word2, word3..]]
     # we use: num1 and num2 and (word1 or word2 or word3)
     # coll.query(query_texts="вул", 
@@ -207,18 +231,21 @@ def query_warehouses_collection(query: str, n_results=20) -> QueryResult:
             document_filter.update(alphanumeric_filter[0])
 
     # print(document_filter)
+    # print("======================")
 
-    temp_res = coll.query(
+    query_results = coll.query(
         query_embeddings=query_embedding,
         n_results=n_results,
         include=query_response_items,
-        # include=["documents", "distances", "metadatas"]  # with metadata
         where_document=document_filter,
+        where=metadata_filter,
     )
-    for item in query_response_items:
-        results[item] += temp_res[item]
 
-    return results
+    if numero_result:
+        for item in query_response_items:
+            query_results[item][0] = numero_result[item][0] + query_results[item][0]
+    
+    return query_results
 
 
 # used mainly for testing
@@ -238,7 +265,9 @@ def delete_collection(collection_name):
 # print(get_collection(cities_collection_name))
 
 # create_embedded_collection(warehouses_collection_name, preprocess_warehouses_description)
-print(query_warehouses_collection(query="26249 перемога"))
+# print(query_warehouses_collection(query="15 32"))
+# print(query_warehouses_collection(query="квітнева"))
+# print(query_warehouses_collection(query="26249"))
 # print(get_collection(warehouses_collection_name))
 
 # careful, deletes collection
