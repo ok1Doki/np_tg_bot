@@ -13,9 +13,9 @@ import core.config as config
 # chroma's OpenAIEmbeddingFunction limits requests to 3 per min, 
 # langchain's OpenAIEmbeddings handles retries.
 
-persist_directory = "chroma_01"  # local dev path for "script-running"
+persist_directory = "chroma_02"  # local dev path for "script-running"
 # persist_directory = "chroma_test"  # local test path for "script-running"
-# persist_directory = "./core/utils/chroma"  # path used in docker
+# persist_directory = "./core/utils/chroma_02"  # path used in docker
 client = chromadb.PersistentClient(path=persist_directory)
 embeddings = OpenAIEmbeddings(openai_api_key=config.openai_api_key)
 test_collection_name = "collection_name"
@@ -24,47 +24,91 @@ warehouses_collection_name = "getWarehouses"
 query_response_items = ["documents", "distances"]
 # query_response_items = ["documents", "distances", "metadatas"]  # with metadata
 
+
 # heavy, use once, not for in-docker use
-def create_embedded_collection(collection_name, preprocess_fn):
-    coll = client.get_or_create_collection(name=collection_name,
-                                    metadata={"hnsw:space": "cosine"},
-                                    )
-    file_path='../data/' + collection_name + ".json"
+def create_embedded_cities_collection(demo=False):
+    coll = client.get_or_create_collection(name=cities_collection_name, 
+                                           metadata={"hnsw:space": "cosine"},
+                                           )
+    file_path='../data/' + cities_collection_name + ".json"
     data = json.load(open(file_path, encoding='utf-8-sig'))
     to_be_embedded_list = []
+
     for item in data:
-        description = preprocess_fn(item["Description"])
+        description = preprocess_cities_description(item["Description"])
         to_be_embedded_list.append(description)
-    # to_be_embedded_list = to_be_embedded_list[:110]  # demo, first letter 'A' (for cities)
+    
+    if demo:
+        to_be_embedded_list = to_be_embedded_list[:110]  # demo, first letter 'A' (for cities)
     print(len(to_be_embedded_list))
     # print(to_be_embedded_list[:3])
 
     embeddings_list = []
     for i in range(0, len(to_be_embedded_list), 5000):
         embeddings_list += embeddings.embed_documents(to_be_embedded_list[i:i+5000])
-        time.sleep(60)  # can lower to 20 mb, and up 5k a bit idk
-        
+        time.sleep(30)
+    
     print(len(embeddings_list[0]))
     print(len(embeddings_list))
 
-    if collection_name == cities_collection_name:
-        for i in range(len(to_be_embedded_list)):
-            coll.add(
-                ids=data[i]['Ref'],
-                embeddings=embeddings_list[i],
-                documents=data[i]['Description'],
-                metadatas=data[i]
-            )
-    if collection_name == warehouses_collection_name:
-        for i in range(len(to_be_embedded_list)):
-            coll.add(
-                ids=data[i]['Ref'],
-                embeddings=embeddings_list[i],  # preprocess_warehouses_description()
-                # documents = preprocessed descriptions, use metadata for ui
-                # mb (Description + ", " + CityDescription) for UI
-                documents=to_be_embedded_list[i],
-                metadatas=preprocess_warehouses_metadata(data[i])
-            )
+    ids = []
+    documents = []
+    metadatas = data[:len(embeddings_list)]
+    for i in range(len(embeddings_list)):
+        ids.append(data[i]['Ref'])
+        documents.append(data[i]['Description'])
+
+    coll.add(
+        ids=ids,
+        embeddings=embeddings_list,
+        documents=documents,
+        metadatas=metadatas
+    )
+    print(len(coll.get(include=["documents"])['ids']))
+
+
+# heavy, use once, not for in-docker use
+def create_embedded_warehouses_collection(demo=False):
+    coll = client.get_or_create_collection(name=warehouses_collection_name,
+                                           metadata={"hnsw:space": "cosine"},
+                                           )
+    file_path='../data/' + warehouses_collection_name + ".json"
+    data = json.load(open(file_path, encoding='utf-8-sig'))
+    to_be_embedded_list = []
+
+    for item in data:
+        # description = preprocess_warehouses_description(item["Description"])
+        short_address = preprocess_warehouses_shortaddress(item["ShortAddress"])
+        to_be_embedded_list.append(short_address)
+    
+    if demo:
+        to_be_embedded_list = to_be_embedded_list[:100]  # demo
+    print(len(to_be_embedded_list))
+    # print(to_be_embedded_list[:3])
+    
+    embeddings_list = []
+    for i in range(0, len(to_be_embedded_list), 5000):
+        embeddings_list += embeddings.embed_documents(to_be_embedded_list[i:i+5000])
+        time.sleep(30)
+    
+    print(len(embeddings_list[0]))
+    print(len(embeddings_list))
+
+    ids = []
+    documents = to_be_embedded_list
+    for i in range(len(embeddings_list)):
+        ids.append(data[i]['Ref'])
+        metadatas = preprocess_warehouses_metadata(data[i])
+    
+    # test if chroma can handle everything in one go
+    coll.add(
+        ids=ids,
+        embeddings=embeddings_list,  # preprocessed ShortAddress
+        # documents = preprocessed ShortAddress, use metadata for ui
+        # mb (Description + ", " + CityDescription) for UI
+        documents=documents,
+        metadatas=metadatas
+    )
     print(len(coll.get(include=["documents"])['ids']))
 
 
@@ -80,6 +124,22 @@ def preprocess_warehouses_description(description):
     out2 = re.sub(pattern2, '', out1)
 
     return out2.strip().lower()
+
+
+def preprocess_warehouses_shortaddress(shortAdress):
+    pattern = r'\s*\(.*?\):'  # Match '(...):' pattern, in our data = '(до 30кг):'
+    s = re.sub(pattern, '', shortAdress).lower()
+    city = s.split(',')[0]
+    alphanumeric_substrings = find_alphanumeric_substrings(s)
+    words = find_ukrainian_words(s)
+    words_to_remove = [city, "тільки", "для", "мешканців", "мешк", "магазин", "маг", "вулиця", "вул",
+                       "проспект", "просп", "пр", "провулок", "пров", "біля", "відділення", "під'їзд",
+                       "п", "корпус", "корп", "в", "клієнтській", "зоні", "від", "секція", "секц", "осбб",
+                       "приміщення", "прим", "район", "ран", "р-н", "мікрорайон", "тц", "т-ц", "трц",
+                       "площа", "пл", "бульвар", "бульв", "б", "проїзд", "шосе", "будинок", "буд", "с", "м"]
+    res = list(set(words) - set(words_to_remove)) + alphanumeric_substrings
+    
+    return ' '.join(res)
 
 
 def preprocess_warehouses_metadata(data: json):
@@ -106,7 +166,8 @@ def test_preprocess_warehouses_description():
 
 # used for warehouses querying
 def find_alphanumeric_substrings(input_string):
-    pattern = r'\b(?:\d+/[а-яА-ЯіІїЇєЄҐґ\d]+|\d+/\d+|\d+[а-яА-ЯіІїЇєЄҐґ]|[\d]+(?!\d)|[а-яА-ЯіІїЇєЄҐґ]+-\d+|\d+[а-яА-ЯіІїЇєЄҐґ]\d+)\b'
+    pattern = r'\b(?:\d+/[а-яА-ЯіІїЇєЄҐґ\d]+|\d+/\d+|\d+[а-яА-ЯіІїЇєЄҐґ]|[\d]+(?!\d)|\
+        [а-яА-ЯіІїЇєЄҐґ]+-\d+|\d+[а-яА-ЯіІїЇєЄҐґ]\d+)\b'
     substrings_found = re.findall(pattern, input_string, re.IGNORECASE | re.UNICODE)
 
     return substrings_found
@@ -230,6 +291,7 @@ def query_warehouses_collection(query: str, cityRef=None, n_results=20) -> Query
         elif len(alphanumeric_filter) == 1:
             document_filter.update(alphanumeric_filter[0])
 
+    # debug output
     # print(document_filter)
     # print("======================")
 
@@ -256,15 +318,16 @@ def get_collection(collection_name):
     return len(coll.get(include=["documents"])["ids"])
 
 
+# careful, deletes collection
 def delete_collection(collection_name):
     client.delete_collection(name=collection_name)
 
 
-# create_embedded_collection(cities_collection_name, preprocess_cities_description)
+# create_embedded_cities_collection(demo=False)
 # print(query_cities_collection(query="антонівка"))
 # print(get_collection(cities_collection_name))
 
-# create_embedded_collection(warehouses_collection_name, preprocess_warehouses_description)
+# create_embedded_warehouses_collection(demo=False)
 # print(query_warehouses_collection(query="15 32"))
 # print(query_warehouses_collection(query="квітнева"))
 # print(query_warehouses_collection(query="26249"))
@@ -272,3 +335,5 @@ def delete_collection(collection_name):
 
 # careful, deletes collection
 # delete_collection(warehouses_collection_name)
+
+# print(persist_directory)
