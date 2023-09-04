@@ -18,5 +18,12 @@ RUN pip3 install -U pip && pip3 install -U wheel && pip3 install -U setuptools==
 COPY ./requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt && rm -r /tmp/requirements.txt
 
+RUN apt-get update
+RUN apt-get install -y locales
+RUN sed -i -e 's/# uk_UA.UTF-8 UTF-8/uk_UA.UTF-8 UTF-8/' /etc/locale.gen && \
+    locale-gen
+ENV LC_ALL uk_UA.UTF-8
+ENV LANG uk_UA.UTF-8
+ENV LANGUAGE uk_UA:uk
+
 COPY . /code/core
-RUN ln -s /code/core/secret.json secret.json

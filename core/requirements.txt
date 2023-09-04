@@ -12,4 +12,4 @@ fastapi==0.99.1
 uvicorn[standard]==0.22.0
 python-multipart==0.0.6
 chromadb==0.4.8
-pydevd-pycharm
+langchain==0.0.277

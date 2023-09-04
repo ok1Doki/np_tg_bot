@@ -13,9 +13,9 @@ import core.config as config
 # chroma's OpenAIEmbeddingFunction limits requests to 3 per min, 
 # langchain's OpenAIEmbeddings handles retries.
 
-persist_directory = "chroma_02"  # local dev path for "script-running"
+# persist_directory = "chroma_02"  # local dev path for "script-running"
 # persist_directory = "chroma_test"  # local test path for "script-running"
-# persist_directory = "./core/utils/chroma_02"  # path used in docker
+persist_directory = "./core/utils/chroma_02"  # path used in docker
 client = chromadb.PersistentClient(path=persist_directory)
 embeddings = OpenAIEmbeddings(openai_api_key=config.openai_api_key)
 test_collection_name = "collection_name"

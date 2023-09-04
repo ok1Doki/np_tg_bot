@@ -27,5 +27,5 @@ mongo_express_password: password
 
 
 #--------- CHROMA DB CONFIG ---------#
-chromadb_uri: localhost
+chromadb_uri: chroma
 chromadb_port: 8009
