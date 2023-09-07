@@ -9,7 +9,7 @@ from pathlib import Path
 
 import openai
 import pydub
-from google.cloud import texttospeech as tts
+# from google.cloud import texttospeech as tts
 from telegram import (
     Update,
     User,
@@ -209,6 +209,10 @@ async def message_handle(update: Update, context: CallbackContext, message=None,
             }[config.chat_modes[chat_mode]["parse_mode"]]
 
             chatgpt_instance = openai_utils.ChatGPT(model=current_model)
+            # here capture if the message is an input for function call, and send_function_call(message) if so. 
+            #   mb db/history or global var=function (for single user/demo)
+            # make send_function_call() return:
+            #   answer, (n_input_tokens, n_output_tokens), n_first_dialog_messages_removed
             if config.enable_message_streaming:
                 gen = chatgpt_instance.send_message_stream(_message, dialog_messages=dialog_messages, chat_mode=chat_mode)
             else:
@@ -245,9 +249,10 @@ async def message_handle(update: Update, context: CallbackContext, message=None,
 
                 prev_answer = answer
 
-            await generate_voice(update, context, message=answer)
+            # await generate_voice(update, context, message=answer)
 
             # update user data
+            # history update here
             new_dialog_message = {"user": _message, "bot": answer, "date": datetime.now()}
             db.set_dialog_messages(
                 user_id,
@@ -369,23 +374,23 @@ async def generate_image_handle(update: Update, context: CallbackContext, messag
         await update.message.reply_photo(image_url, parse_mode=ParseMode.HTML)
 
 
-async def generate_voice(update: Update, context: CallbackContext, message=None):
-    user_id = update.message.from_user.id
-    db.set_user_attribute(user_id, "last_interaction", datetime.now())
+# async def generate_voice(update: Update, context: CallbackContext, message=None):
+#     user_id = update.message.from_user.id
+#     db.set_user_attribute(user_id, "last_interaction", datetime.now())
 
-    voice_name = 'uk-UA-Wavenet-A'
-    language_code = "-".join(voice_name.split("-")[:2])
-    text_input = tts.SynthesisInput(text=message)
-    voice_params = tts.VoiceSelectionParams(language_code=language_code, name=voice_name)
-    audio_config = tts.AudioConfig(audio_encoding=tts.AudioEncoding.MP3, speaking_rate=1.3)
+#     voice_name = 'uk-UA-Wavenet-A'
+#     language_code = "-".join(voice_name.split("-")[:2])
+#     text_input = tts.SynthesisInput(text=message)
+#     voice_params = tts.VoiceSelectionParams(language_code=language_code, name=voice_name)
+#     audio_config = tts.AudioConfig(audio_encoding=tts.AudioEncoding.MP3, speaking_rate=1.3)
 
-    client = tts.TextToSpeechClient()
-    response = client.synthesize_speech(
-        input=text_input,
-        voice=voice_params,
-        audio_config=audio_config,
-    )
-    await update.message.chat.send_voice(voice=response.audio_content)
+#     client = tts.TextToSpeechClient()
+#     response = client.synthesize_speech(
+#         input=text_input,
+#         voice=voice_params,
+#         audio_config=audio_config,
+#     )
+#     await update.message.chat.send_voice(voice=response.audio_content)
 
 
 async def cancel_handle(update: Update, context: CallbackContext):

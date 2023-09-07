@@ -11,6 +11,13 @@ from core.novaposhta.util.base_request import Request
 
 
 async def get_document_delivery_date(city_sender: str, city_recipient: str, service_type='WarehouseWarehouse'):
+    
+    # demo version
+    city_sender = chroma.query_cities_collection(query=city_sender)["metadatas"][0][0]["Description"]
+    city_recipient = chroma.query_cities_collection(query=city_recipient)["metadatas"][0][0]["Description"]
+    res = "get_document_delivery_date(\ncity sender: " + city_sender + ", \ncity recipient: " + city_recipient + "\n)"
+    return res
+
     city_sender_ref = \
     chroma.query_cities_collection(query=city_sender)["ids"][0][0]
     city_recipient_ref = \

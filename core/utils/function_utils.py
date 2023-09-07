@@ -137,7 +137,7 @@ fns_collection[f.name] = f
 f1 = function(fn=delivery_time.get_document_delivery_date, 
               trigger_fn=trigger_fn,  # insert trigger fn for ui flow here
               name="get_document_delivery_date", 
-              description="Прогноз орієнтовної дати доставки вантажу")
+              description="Прогноз/термін орієнтовної дати доставки вантажу")
 f1.properties.add(property("city_sender", PropertyType.string, "Населений пункт відправника"))
 f1.properties.add(property("city_recipient", PropertyType.string, "Населений пункт отримувача"))
 # i suggest remove service_type and make it a default value WarehouseWarehouse for now.

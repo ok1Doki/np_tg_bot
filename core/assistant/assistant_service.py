@@ -23,7 +23,7 @@ async def handle_audio_from_user(session_id: str,
     chatgpt_instance = openai_utils.ChatGPT(model=config.openai_model)
     ai_text_reply, (n_input_tokens, n_output_tokens), n_first_dialog_messages_removed = \
         await chatgpt_instance.send_message(user_message,
-                                            session_id,
+                                            # session_id,
                                             dialog_messages=messages_history[session_id],
                                             trigger_fn=function_trigger)
 

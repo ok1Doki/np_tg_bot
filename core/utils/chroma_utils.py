@@ -21,8 +21,8 @@ embeddings = OpenAIEmbeddings(openai_api_key=config.openai_api_key)
 test_collection_name = "collection_name"
 cities_collection_name = "getCities"
 warehouses_collection_name = "getWarehouses"
-query_response_items = ["documents", "distances"]
-# query_response_items = ["documents", "distances", "metadatas"]  # with metadata
+# query_response_items = ["documents", "distances"]
+query_response_items = ["documents", "distances", "metadatas"]  # with metadata
 
 
 # heavy, use once, not for in-docker use

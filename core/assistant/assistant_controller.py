@@ -47,13 +47,13 @@ async def send_message(conn_id: str, message: str, role: Role, with_audio: bool 
     message_obj = {"role": role, "type": MessageType.TEXT, "data": message}
     await connections_pool[conn_id].send_json(message_obj)
 
-    if with_audio:
-        generated_audio_ai = convert_text_to_audio(message)
-        output_audio_local_file_path = persist_binary_file_locally(
-            data=generated_audio_ai.audio_content,
-            file_suffix='ai_audio_reply.mp3'
-        )
-        await send_audio(conn_id, output_audio_local_file_path)
+    # if with_audio:
+    #     generated_audio_ai = convert_text_to_audio(message)
+    #     output_audio_local_file_path = persist_binary_file_locally(
+    #         data=generated_audio_ai.audio_content,
+    #         file_suffix='ai_audio_reply.mp3'
+    #     )
+    #     await send_audio(conn_id, output_audio_local_file_path)
 
 
 async def send_audio(conn_id: str, audio_file_path: str):
