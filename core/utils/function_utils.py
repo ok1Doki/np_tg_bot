@@ -5,6 +5,7 @@ import core.novaposhta.delivery_time.client as delivery_time
 import core.novaposhta.document_price.client as document_price
 import core.novaposhta.tracking.client as tracking
 import core.novaposhta.express_waybill.client as express_waybill
+import chroma_utils
 
 
 class PropertyType(str, Enum):
@@ -111,6 +112,7 @@ def my_fn(**kwargs):
     arg1 = kwargs["printText"]
     return arg1
 
+# stub for trigger fn, use different trigger_fn for each function
 def trigger_fn():
     pass
 
@@ -219,7 +221,15 @@ f4.properties.add(property("recipient_address", PropertyType.string, "Адрес
 # f4.properties.add(property("contact_recipient", PropertyType.string, "Контактна особа отримувача"))  # ?
 f4.properties.add(property("recipients_phone", PropertyType.string, "номер телефону отримувача"))
 
+# translate to ua later
+f5 = function(fn=chroma_utils.provideExtraInfo,
+              trigger_fn=trigger_fn,  # unnecessary?
+              name="provideExtraInfo",
+              description="provide extra info from company database")
+f5.properties.add(property("topic_id", PropertyType.string, "id of the matching topic"))
+
 fns_collection[f1.name] = f1
 fns_collection[f2.name] = f2
 fns_collection[f3.name] = f3
 fns_collection[f4.name] = f4
+fns_collection[f5.name] = f5
